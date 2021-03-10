@@ -42,6 +42,10 @@ header nav .header--ul a:hover{
     width: 40px;
 }
 
+#G_Aps_Icon img{
+    width:20px;
+}
+
 #G_Aps_Icon:hover{
     background-color: rgba(60,64,67,0.08);
     border-radius: 50%;
@@ -136,7 +140,8 @@ main .main-input input{
     line-height: 44px;
 }
 .micro-icon img{
-    width: auto;
+    
+    width: 24px;
 }
 
 main .main-buttons{
