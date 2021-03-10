@@ -206,7 +206,7 @@ footer .info{
     
 }
 
-footer .t-l ,.t-r{
+footer .text-left ,.text-right{
     display: block;
     padding: 15px;
     white-space: nowrap;
