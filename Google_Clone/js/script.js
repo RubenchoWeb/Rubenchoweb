@@ -1,3 +1,5 @@
+//https://ipapi.co/api/?javascript#complete-location5
+
 fetch('https://ipapi.co/json/')
 .then(function(response) {
   response.json().then(jsonData => {
