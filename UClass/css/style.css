@@ -1,0 +1,10 @@
+header > nav{
+    background-color: #107c10;
+}
+
+.nav-link{
+    color: white;
+    font-weight: 500;
+    font-size: x-large;
+    padding-right: 30px!important;
+}
