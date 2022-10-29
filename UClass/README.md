@@ -1,6 +1,8 @@
-### Ese es un proyecto desarrollado Para cumplir con los objetivos del el Bootcamp de Desarrollo Web Full Stack de Uclass
+### Este es un proyecto desarrollado Para cumplir con los objetivos del el Bootcamp de Desarrollo Web Full Stack de Uclass
 
 ## Proyecto 1 Landing de Venta
+
+![imagen](/img/prototipado.jpg)
 
 # En este proyecto se están desarrollando las siguiente habilidades técnicas 
 

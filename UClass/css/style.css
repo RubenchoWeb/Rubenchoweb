@@ -8,3 +8,8 @@ header > nav{
     font-size: x-large;
     padding-right: 30px!important;
 }
+
+.btn-cta{
+    background-color: #107c10;
+    color: white;
+}
