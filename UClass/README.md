@@ -2,10 +2,25 @@
 
 ## Proyecto 1 Landing de Venta
 
-![imagen](/img/prototipado.jpg)
+![imagen](../img/prototipado.jpg)
 
 # En este proyecto se están desarrollando las siguiente habilidades técnicas 
 
 - Prototipado simple (baja findelidad) que mostrará tu plan de desarrollo. Puedes utilizar un dibujo a lápiz, que muestre la página que vas a construir.;
 - Etiquetas estándar HTML5;
 - CSS, incluyendo técnicas Flexbox, CSS Grids y Responsive Web Design.;
+
+# Este proyecto cuenta con las siguientes secciones:
+
+- Header
+- Jumbotron
+- Registro
+- Catalogo
+- Footer
+
+# Los lenguajes y tecnologías usadas fueron:
+
+- HTML5
+- CSS3
+- Javascript
+- Bootstrap 4
