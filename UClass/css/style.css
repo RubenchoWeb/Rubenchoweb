@@ -1,5 +1,24 @@
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    background-color: #343a40;
+    color: white;
+}
+
+header{
+    position: fixed;
+    min-width: -webkit-fill-available;
+    z-index: 1;
+    max-height: 200px;
+}
+
 header > nav{
     background-color: #107c10;
+}
+.logo{
+    height: 100px;
+    width: 100px;
 }
 
 .nav-link{
@@ -9,7 +28,38 @@ header > nav{
     padding-right: 30px!important;
 }
 
+.main-img{
+    margin: auto;
+}
+
 .btn-cta{
     background-color: #107c10;
     color: white;
 }
+
+#submit{
+    background-color: #107c10;
+    color: white;
+}
+
+#jumbotron{
+    padding-top: 200px;
+}
+
+#registro{
+    text-align: center;
+    background-image: url("../img/main-banner.jpg");
+    background-position: center;
+    height: 80vh;
+}
+
+.formulario{
+    margin-top: 30vh;
+}
+
+@media only screen and (max-width: 991px) {
+    .logo{
+        height: 50px;
+        width: 50px;
+    }
+  }
