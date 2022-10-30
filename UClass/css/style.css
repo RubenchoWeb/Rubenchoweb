@@ -5,6 +5,9 @@ body{
     background-color: #343a40;
     color: white;
 }
+li>a{
+    color: white;
+}
 
 header{
     position: fixed;
@@ -63,3 +66,7 @@ header > nav{
         width: 50px;
     }
   }
+
+  footer{
+    background-color: #107c10;
+}
