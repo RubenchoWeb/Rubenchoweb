@@ -2,7 +2,7 @@
 
 ## Proyecto 1 Landing de Venta
 
-![imagen](../img/prototipado.jpg)
+![imagen](https://github.com/RubenchoWeb/Rubenchoweb/blob/master/UClass/img/Prototipado.jpg?raw=true)
 
 # En este proyecto se están desarrollando las siguiente habilidades técnicas 
 
