@@ -65,6 +65,23 @@ function retrieveData() {
     cell1.innerHTML = readData[0];
     cell2.innerHTML = readData[1];
     cell3.innerHTML = readData[2];
-    cell4.innerHTML = `<button onclick="edit(this)"><a href="script.js:void(0)" style="text-decoration: none;">Edit</a></button> &nbsp
-  <button onclick="remove(this)"><a href="script.js:void(0)" style="text-decoration: none;">Delete</a></button>`;
+    cell4.innerHTML = `<button onclick="edit(this)"><a href="script.js:void(0)" style="text-decoration: none;">Editar</a></button> &nbsp
+  <button onclick="remove(this)"><a href="script.js:void(0)" style="text-decoration: none;">Eliminar</a></button>`;
+  }
+
+  //EDIT
+function edit(td) {
+    row = td.parentElement.parentElement;
+    document.getElementById("name").value = row.cells[0].innerHTML;
+    document.getElementById("job").value = row.cells[1].innerHTML;
+    document.getElementById("exp").value = row.cells[2].innerHTML;
+  }
+  
+  // UPDATE
+  function update(td) {
+    row = td.parentElement.parentElement;
+    row.cells[0].innerHTML = document.getElementById("name").value;
+    row.cells[1].innerHTML = document.getElementById("job").value;
+    row.cells[2].innerHTML = document.getElementById("exp").value;
+    row = null;
   }
