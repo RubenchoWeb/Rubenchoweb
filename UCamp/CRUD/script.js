@@ -85,3 +85,13 @@ function edit(td) {
     row.cells[2].innerHTML = document.getElementById("exp").value;
     row = null;
   }
+
+  // DELETE
+function remove(td) {
+    var ans = confirm("Are you sure you want to delete the record?");
+    if (ans == true) {
+      var row = td.parentElement.parentElement;
+      document.getElementById("table").deleteRow(row.rowIndex);
+      msg.innerHTML = `<h3 style = "color: red;">Data Deleted !</h3>`;
+    }
+  }
