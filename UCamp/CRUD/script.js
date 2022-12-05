@@ -88,10 +88,10 @@ function edit(td) {
 
   // DELETE
 function remove(td) {
-    var ans = confirm("Are you sure you want to delete the record?");
+    var ans = confirm("¿Estás seguro que quieres eliminar el registro?");
     if (ans == true) {
       var row = td.parentElement.parentElement;
       document.getElementById("table").deleteRow(row.rowIndex);
-      msg.innerHTML = `<h3 style = "color: red;">Data Deleted !</h3>`;
+      msg.innerHTML = `<h3 style = "color: red;">¡Registro eliminado!</h3>`;
     }
   }

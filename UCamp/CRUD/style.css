@@ -19,6 +19,11 @@ body{
   }
 
   @media only screen and (max-width: 991px) {
+    
+    body{
+        font-size: x-large;
+    }
+    
     #table{
         max-width: 90%;
         margin: 0 auto;
@@ -33,7 +38,8 @@ body{
   .col {
     font-weight: bold;
     font-size: 18px;
-    background-color: #f7e018
+    background-color: #f7e018;
+    max-width: 30%;
   }
   
   tr{
