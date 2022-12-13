@@ -5,19 +5,18 @@ var msg = document.getElementById("msg");
 // Submit function
 function Submit() {
   var dataEntered = retrieveData();
-  var readData = readingDataFromLocalStorage(dataEntered);
+  //var readData = readingDataFromLocalStorage(dataEntered);
   if (dataEntered == false) {
     msg.innerHTML = `<h3 style = "color: red;">Ingresa los datos !</h3>`;
   } else {
     if (row == null) {
-      insert(readData);
+      insert(dataEntered);
       msg.innerHTML = `<h3 style = "color: yellow;">Datos ingresados !</h3>`;
     } else {
       update();
       msg.innerHTML = `<h3 style = "color: orange;">Datos actualizados !</h3>`;
     }
   }
-
   document.getElementById("form").reset();
 }
 
@@ -51,22 +50,50 @@ function retrieveData() {
     var arr = [n1, j1, e1];
     return arr;
   }
+
+  function upsert(callback){
+    if(localStorage.getItem("empleados") === null){
+      localStorage.setItem("empleados",JSON.stringify([]))
+    }
+    let baseDeDatos = JSON.parse(localStorage.getItem("empleados"))
+    baseDeDatos = callback(baseDeDatos)
+    localStorage.setItem("empleados",JSON.stringify(baseDeDatos))
+  }
   
   // INSERT
   function insert(readData) {
-    var table = document.getElementById("table");
-    var i = table.rows.length;
-    var row = table.insertRow(i);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    // row.insertCell(4).innerHTML = "JJJ"
-    cell1.innerHTML = readData[0];
-    cell2.innerHTML = readData[1];
-    cell3.innerHTML = readData[2];
-    cell4.innerHTML = `<button onclick="edit(this)"><a href="script.js:void(0)" style="text-decoration: none;">Editar</a></button> &nbsp
-  <button onclick="remove(this)"><a href="script.js:void(0)" style="text-decoration: none;">Eliminar</a></button>`;
+  upsert((baseDeDatos)=>{
+    baseDeDatos.push({
+      nombre: readData[0],
+      trabajo: readData[1],
+      experiencia: readData[2]
+    });
+    return baseDeDatos
+  })
+  showData()
+  }
+
+  // Read
+  function showData(){
+    upsert((baseDeDatos)=>{
+      var table = document.getElementById("tableBody");
+      table.innerHTML = ""
+      baseDeDatos.forEach((empleado)=>{
+        const tr = document.createElement("tr")
+        tr.innerHTML = `
+         <td>${empleado.nombre}</td>
+         <td>${empleado.trabajo}</td>
+         <td>${empleado.experiencia}</td>
+         <td>
+          <button onclick="edit(this)">Editar</button> &nbsp
+          <button onclick="remove(this)">Eliminar</button>
+        </td>
+        `
+        table.appendChild(tr)
+      })
+      return baseDeDatos
+    })
+    
   }
 
   //EDIT
@@ -78,11 +105,15 @@ function edit(td) {
   }
   
   // UPDATE
-  function update(td) {
-    row = td.parentElement.parentElement;
-    row.cells[0].innerHTML = document.getElementById("name").value;
-    row.cells[1].innerHTML = document.getElementById("job").value;
-    row.cells[2].innerHTML = document.getElementById("exp").value;
+  function update() {
+
+    upsert((baseDeDatos)=>{
+      baseDeDatos[row.rowIndex-1].nombre = document.getElementById("name").value;
+      baseDeDatos[row.rowIndex-1].trabajo = document.getElementById("job").value;
+      baseDeDatos[row.rowIndex-1].experiencia = document.getElementById("exp").value;
+      return baseDeDatos
+    })
+    showData();
     row = null;
   }
 
@@ -91,7 +122,18 @@ function remove(td) {
     var ans = confirm("¿Estás seguro que quieres eliminar el registro?");
     if (ans == true) {
       var row = td.parentElement.parentElement;
-      document.getElementById("table").deleteRow(row.rowIndex);
+
+      upsert((baseDeDatos)=>{
+        baseDeDatos.splice(row.rowIndex-1, 1)
+        return baseDeDatos
+      })
+
+      showData()
+      
       msg.innerHTML = `<h3 style = "color: red;">¡Registro eliminado!</h3>`;
     }
+  }
+
+  window.onload = () => {
+    showData()
   }

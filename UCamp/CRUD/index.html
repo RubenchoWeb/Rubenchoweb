@@ -56,7 +56,7 @@
             </legend>
             <form id="form">
               <input type="text" id="name" name="name" placeholder="Nombre"><br><br>
-              <input type="text" id="job" name="jon" placeholder="Trabajo"><br><br>
+              <input type="text" id="job" name="job" placeholder="Trabajo"><br><br>
               <input type="text" id="exp" name="exp" placeholder="Experiencia"><br><br>
               <input type="button" value="Ingresar" id="btn" onclick="Submit()">
               <input type="reset">
@@ -74,12 +74,18 @@
             </legend>
         
             <table border="2" id="table">
-              <tr>
-                <td class="col">Nombre</td>
-                <td class="col">Trabajo</td>
-                <td class="col">Experiencia</td>
-                <td class="col">Modificar</td>
-              </tr>
+              <thead>
+                <tr>
+                  <td class="col">Nombre</td>
+                  <td class="col">Trabajo</td>
+                  <td class="col">Experiencia</td>
+                  <td class="col">Modificar</td>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+
+              </tbody>
+              
             </table>
           </fieldset>
     </section>
