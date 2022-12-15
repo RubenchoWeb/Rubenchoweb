@@ -1,32 +1,61 @@
-var row = null;
-var msg = document.getElementById("msg");
-
-// CREATE
-// Submit function
+// Variable para obtener datos de los registros
+let row = null;
+// Mensaje cuando se realiza una acción
+let msg = document.getElementById("msg");
+/*
+  Clear form
+  Funcion creada para solucionar un bug al limpiar los datos del formulario
+*/
+function resetForm() {
+  row = null;
+  document.getElementById("form").reset();
+}
+/* 
+  CREATE
+  Submit function se activa al dar click en Ingresar
+*/ 
 function Submit() {
+  /*
+    La variable dataEntered devuelve el valor de la función retrieveData
+    La función retrieveData almacena los datos en un array en caso de que
+    No se ingresen datos regresa un false
+  */
   var dataEntered = retrieveData();
-  //var readData = readingDataFromLocalStorage(dataEntered);
+  //Si dataEntered es falso msg escribe un mensaje indicando que ingrese datos
   if (dataEntered == false) {
-    msg.innerHTML = `<h3 style = "color: red;">Ingresa los datos !</h3>`;
+    msg.innerHTML = `<h3 style = "color: red;">¡Ingresa todos los datos!</h3>`;
   } else {
+    /*
+      Si no se han se ha seleccionado una fila de datos para editar se llama la funcion
+      insert enviandole los datos almacenados en dataEntered luego muestra el mensaje de datos ingresados
+    */
     if (row == null) {
       insert(dataEntered);
-      msg.innerHTML = `<h3 style = "color: yellow;">Datos ingresados !</h3>`;
+      msg.innerHTML = `<h3 style = "color: yellow;">¡Datos ingresados!</h3>`;
     } else {
+      /*
+        Si se selecciona una fila llama la función de update enviandole los datos almacenados
+        en dataEntered luego muestra el mensaje de datos actualizados
+      */
       update();
-      msg.innerHTML = `<h3 style = "color: orange;">Datos actualizados !</h3>`;
+      msg.innerHTML = `<h3 style = "color: orange;">¡Datos actualizados!</h3>`;
     }
   }
-  document.getElementById("form").reset();
+  //Despues de ejecutar la función limpia el formulario
+  resetForm();
 }
 
 // READ
 // Retrieve data
 function retrieveData() {
+    //Obtenemos los datos de los input por medio del id
     var name1 = document.getElementById("name").value;
     var job = document.getElementById("job").value;
     var exp = document.getElementById("exp").value;
-  
+    /*
+      se almacenan los valores en un array si es vacio regresa falso,
+      caso contrario regresa los valores del array
+    */
     var arr = [name1, job, exp];
     if (arr.includes("")) {
       return false;
@@ -36,20 +65,6 @@ function retrieveData() {
   }
   
   //Data in Local Storage
-  function readingDataFromLocalStorage(dataEntered) {
-    // Storing data in local storage
-    var n = localStorage.setItem("Name", dataEntered[0]);
-    var j = localStorage.setItem("Job", dataEntered[1]);
-    var e = localStorage.setItem("Experience", dataEntered[2]);
-  
-    // Show data in table (Getting item from localStorage)
-    var n1 = localStorage.getItem("Name", n);
-    var j1 = localStorage.getItem("Job", j);
-    var e1 = localStorage.getItem("Experience", e);
-  
-    var arr = [n1, j1, e1];
-    return arr;
-  }
 
   function upsert(callback){
     if(localStorage.getItem("empleados") === null){

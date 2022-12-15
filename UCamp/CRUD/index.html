@@ -54,12 +54,13 @@
             <legend>
               <h2>Ingresa los datos del trabajador</h2>
             </legend>
-            <form id="form">
+            <form id="form" onreset="clear()">
               <input type="text" id="name" name="name" placeholder="Nombre"><br><br>
               <input type="text" id="job" name="job" placeholder="Trabajo"><br><br>
               <input type="text" id="exp" name="exp" placeholder="Experiencia"><br><br>
               <input type="button" value="Ingresar" id="btn" onclick="Submit()">
-              <input type="reset">
+              <input type="button" onclick="resetForm();" value="Limpiar datos">
+              
             </form>
           </fieldset>
         
