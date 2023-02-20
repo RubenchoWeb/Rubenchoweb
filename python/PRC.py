@@ -11,8 +11,8 @@ def choice (player):
         return ("Opción no disponible")
 
 def text():
-    print(f'Has elegido: {choice(user_option)}\n')
-    print(f'El pc ha elegido: {choice(computer_option)}\n')
+    print(f'Has seleccionado: {choice(user_option)}\n')
+    print(f'El pc ha seleccionado: {choice(computer_option)}\n')
 
 print('Juego de piedra, papel o tijera')
 
