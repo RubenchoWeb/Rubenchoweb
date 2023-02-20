@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 def choice (player):
     if player == 1:
@@ -19,7 +19,7 @@ print('Juego de piedra, papel o tijera')
 user_option = int(
     input('\n1)Piedra\n2)papel\n3)tijera \n Seleciona tu opcion:=>'))
 
-computer_option = random.randint(1,3)
+computer_option = randint(1,3)
 
 if user_option == computer_option:
     text()
