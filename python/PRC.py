@@ -23,7 +23,6 @@ user_option = int(
 
 computer_option = randint(1,3)
 
-
 if user_option == computer_option:
     text()
     print("Empate!")
