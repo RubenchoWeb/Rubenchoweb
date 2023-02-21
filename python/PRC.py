@@ -14,19 +14,20 @@ def choice (player):
 
 def text():
     print(f'Has seleccionado: {choice(user_option)}\n')
-    print(f'El pc ha seleccionado: {choice(computer_option)}\n')
+    print(f'El pc ha seleccionado: {(computer_option)}\n')
 
 print('Juego de piedra, papel o tijera')
 
 user_option = int(
     input('\n1)Piedra\n2)papel\n3)tijera \n Seleciona tu opcion:=>'))
 
-computer_option = randint(1,3)
+computer_option = options[randint(0,2)]
 
-if user_option == computer_option:
+if choice(user_option) == computer_option:
     text()
     print("Empate!")
-elif user_option == ((options[0]) and computer_option == 3) or (user_option == (options[1]) and computer_option == 1) or (user_option == (options[2]) and computer_option == 2):
+    
+elif ((choice(user_option) == options[0]) and (computer_option == options[2])) or ((choice(user_option) == options[1]) and (computer_option == options[0])) or ((choice(user_option) == options[2]) and (computer_option == options[1])):
     text()
     print("Ganaste!")
 else:
