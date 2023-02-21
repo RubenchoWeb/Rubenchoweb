@@ -1,12 +1,14 @@
 from random import randint
 
+options = ('piedra', 'papel', 'tijera')
+
 def choice (player):
     if player == 1:
-        return ('piedra')
+        return (options[0])
     elif player == 2:
-        return ('papel')
+        return (options[1])
     elif player == 3:
-        return ('tijera')
+        return (options[2])
     else:
         return ("Opción no disponible")
 
@@ -21,10 +23,11 @@ user_option = int(
 
 computer_option = randint(1,3)
 
+
 if user_option == computer_option:
     text()
     print("Empate!")
-elif user_option == 1 and computer_option == 3 or user_option == 2 and computer_option == 1 or user_option == 3 and computer_option == 2:
+elif user_option == ((options[0]) and computer_option == 3) or (user_option == (options[1]) and computer_option == 1) or (user_option == (options[2]) and computer_option == 2):
     text()
     print("Ganaste!")
 else:
