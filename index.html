@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO: Title updated with keyword -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rubenchoweb | WordPress Web Developer</title>
-    <!-- SEO: Description updated with keyword -->
     <meta name="description" content="Portfolio of Ruben Rodriguez, a specialized WordPress Web Developer focusing on custom themes, plugins, and high-performance backends." />
-    
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- Navigation -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="#" class="logo">Rubencho<span class="highlight">Web</span>.</a>
-        
+
         <nav class="nav-menu" id="nav-menu">
           <ul class="nav-list">
             <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
-            <!-- Updated: Renamed to Skills -->
             <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
             <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
-            <!-- New: Education Link -->
             <li><a href="#education" class="nav-link" data-i18n="nav.education">Education</a></li>
             <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
             <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
           </ul>
-          
-          <!-- Language Switcher -->
+
           <div class="lang-switcher">
             <button class="lang-btn active" data-lang="en">EN</button>
             <span class="lang-divider">/</span>
@@ -53,22 +48,20 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
       <section id="home" class="hero-section">
         <div class="container hero-container">
           <div class="hero-content">
             <span class="greeting" data-i18n="hero.greeting">Hello, I'm</span>
-            <!-- SEO: H1 updated with keyword -->
-            <h1 class="hero-title">Ruben Rodriguez <br><span class="highlight-text">WordPress Web Developer</span></h1>
+            <h1 class="hero-title">Ruben Rodriguez<br /><span class="highlight-text">WordPress Web Developer</span></h1>
             <h2 class="hero-subtitle"><span data-i18n="hero.subtitle_prefix">I build</span> <span id="typewriter" class="highlight"></span><span class="cursor">|</span></h2>
-            <p class="hero-description" data-i18n="hero.description">
-              Specialized in high-performance WordPress solutions. From custom theme development and Gutenberg blocks to complex API integrations and plugin architecture.
-            </p>
+            <p class="hero-description" data-i18n="hero.description">Specialized in high-performance WordPress solutions. From custom theme development and Gutenberg blocks to complex API integrations and plugin architecture.</p>
+
             <div class="hero-btns">
               <a href="#projects" class="btn btn-primary" data-i18n="hero.btn_projects">View Projects</a>
               <a href="#contact" class="btn btn-outline" data-i18n="hero.btn_contact">Get in Touch</a>
             </div>
           </div>
+
           <div class="hero-visual">
             <div class="code-block">
               <div class="code-header">
@@ -92,36 +85,33 @@
         </div>
       </section>
 
-      <!-- Skills Section -->
       <section id="skills" class="section">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title" data-i18n="skills.title">Skills & Expertise</h2>
+            <h2 class="section-title" data-i18n="skills.title">Skills &amp; Expertise</h2>
             <p class="section-subtitle" data-i18n="skills.subtitle">Technical proficiency and management capabilities</p>
           </div>
-          
+
           <div class="skills-split-layout">
-            <!-- Technical Skills Column -->
             <div class="skills-column">
               <h3 class="column-title"><i data-lucide="code-2"></i> <span data-i18n="skills.tech_title">Technical Skills</span></h3>
               <div class="skills-grid-compact">
-                <!-- Backend -->
                 <div class="skill-card-compact">
                   <div class="skill-icon-small"><i data-lucide="database"></i></div>
                   <div class="skill-info">
-                    <h4>Core & Backend</h4>
+                    <h4>Core &amp; Backend</h4>
                     <p>PHP, MySQL, WP-CLI, REST API</p>
                   </div>
                 </div>
-                <!-- Frontend -->
+
                 <div class="skill-card-compact">
                   <div class="skill-icon-small"><i data-lucide="layout"></i></div>
                   <div class="skill-info">
-                    <h4>Frontend & Blocks</h4>
+                    <h4>Frontend &amp; Blocks</h4>
                     <p>React.js, Gutenberg, Tailwind</p>
                   </div>
                 </div>
-                <!-- Performance -->
+
                 <div class="skill-card-compact">
                   <div class="skill-icon-small"><i data-lucide="zap"></i></div>
                   <div class="skill-info">
@@ -129,7 +119,7 @@
                     <p>Redis, Varnish, Core Web Vitals</p>
                   </div>
                 </div>
-                <!-- DevOps -->
+
                 <div class="skill-card-compact">
                   <div class="skill-icon-small"><i data-lucide="server"></i></div>
                   <div class="skill-info">
@@ -140,176 +130,128 @@
               </div>
             </div>
 
-            <!-- Project Management Column -->
             <div class="skills-column">
               <h3 class="column-title"><i data-lucide="briefcase"></i> <span data-i18n="skills.pm_title">Project Management</span></h3>
-              <div class="pm-skills-container" id="pm-skills-list">
-                <!-- PM Skills injected via JS -->
-              </div>
+              <div class="pm-skills-container" id="pm-skills-list"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Experience Section -->
       <section id="experience" class="section bg-alt">
         <div class="container">
           <div class="section-header">
             <h2 class="section-title" data-i18n="experience.title">Corporate Experience</h2>
             <p class="section-subtitle" data-i18n="experience.subtitle">My professional journey in the industry</p>
           </div>
-          
-          <div class="experience-timeline" id="experience-container">
-            <!-- Experience Items Injected via JS -->
-          </div>
+
+          <div class="experience-timeline" id="experience-container"></div>
         </div>
       </section>
 
-      <!-- Education Section -->
       <section id="education" class="section">
         <div class="container">
           <div class="section-header">
             <h2 class="section-title" data-i18n="education.title">Education</h2>
             <p class="section-subtitle" data-i18n="education.subtitle">Academic Background</p>
           </div>
-          
-          <div class="education-list" id="education-container">
-            <!-- Education Items Injected via JS -->
-          </div>
+
+          <div class="education-list" id="education-container"></div>
         </div>
       </section>
 
-      <!-- Projects Section (Carousel) -->
       <section id="projects" class="section bg-alt">
         <div class="container">
           <div class="section-header">
             <h2 class="section-title" data-i18n="projects.title">Selected Works</h2>
-            <p class="section-subtitle" data-i18n="projects.subtitle">Custom Themes, Plugins & Integrations</p>
+            <p class="section-subtitle" data-i18n="projects.subtitle">Custom Themes, Plugins &amp; Integrations</p>
           </div>
 
           <div class="carousel-wrapper">
             <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Slide">
               <i data-lucide="chevron-left"></i>
             </button>
-            
+
             <div class="carousel-view">
               <div class="carousel-track" id="track">
-                
+                <!-- Project cards (kept concise) -->
                 <!-- Project 1 -->
                 <article class="project-card">
                   <div class="project-image">
-                    <!-- SEO: Img tag with Alt attribute -->
-                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1e293b/38bdf8?text=Corporate+Theme" alt="WordPress Web Developer - Corporate Custom Theme" class="project-img">
-                    <div class="project-overlay">
-                      <a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a>
-                    </div>
+                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1e293b/38bdf8?text=Corporate+Theme" alt="Corporate Custom Theme" class="project-img" />
+                    <div class="project-overlay"><a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a></div>
                   </div>
                   <div class="project-content">
                     <h3 data-i18n="projects.p1_title">Corporate Custom Theme</h3>
                     <p data-i18n="projects.p1_desc">A bespoke, high-performance theme built from scratch using the Sage starter theme structure.</p>
-                    <div class="project-tags">
-                      <span>PHP</span>
-                      <span>Blade</span>
-                      <span>Tailwind</span>
-                    </div>
+                    <div class="project-tags"><span>PHP</span><span>Blade</span><span>Tailwind</span></div>
                   </div>
                 </article>
 
                 <!-- Project 2 -->
                 <article class="project-card">
                   <div class="project-image">
-                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/0f172a/6366f1?text=Gutenberg+Blocks" alt="WordPress Web Developer - Gutenberg Block Suite" class="project-img">
-                    <div class="project-overlay">
-                      <a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a>
-                    </div>
+                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/0f172a/6366f1?text=Gutenberg+Blocks" alt="Gutenberg Block Suite" class="project-img" />
+                    <div class="project-overlay"><a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a></div>
                   </div>
                   <div class="project-content">
                     <h3 data-i18n="projects.p2_title">Gutenberg Block Suite</h3>
                     <p data-i18n="projects.p2_desc">A collection of 15+ custom dynamic blocks built with React for a major editorial news site.</p>
-                    <div class="project-tags">
-                      <span>React</span>
-                      <span>WP API</span>
-                      <span>SCSS</span>
-                    </div>
+                    <div class="project-tags"><span>React</span><span>WP API</span><span>SCSS</span></div>
                   </div>
                 </article>
 
                 <!-- Project 3 -->
                 <article class="project-card">
                   <div class="project-image">
-                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/334155/a855f7?text=WooCommerce+Pricing" alt="WordPress Web Developer - WooCommerce Dynamic Pricing" class="project-img">
-                    <div class="project-overlay">
-                      <a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a>
-                    </div>
+                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/334155/a855f7?text=WooCommerce+Pricing" alt="WooCommerce Dynamic Pricing" class="project-img" />
+                    <div class="project-overlay"><a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a></div>
                   </div>
                   <div class="project-content">
                     <h3 data-i18n="projects.p3_title">WooCommerce Dynamic Pricing</h3>
                     <p data-i18n="projects.p3_desc">Custom plugin extension to handle complex B2B tiered pricing logic and bulk discounts.</p>
-                    <div class="project-tags">
-                      <span>WooCommerce</span>
-                      <span>PHP</span>
-                      <span>MySQL</span>
-                    </div>
+                    <div class="project-tags"><span>WooCommerce</span><span>PHP</span><span>MySQL</span></div>
                   </div>
                 </article>
 
                 <!-- Project 4 -->
                 <article class="project-card">
                   <div class="project-image">
-                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1e293b/10b981?text=Headless+App" alt="WordPress Web Developer - Headless Real Estate App" class="project-img">
-                    <div class="project-overlay">
-                      <a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a>
-                    </div>
+                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1e293b/10b981?text=Headless+App" alt="Headless Real Estate App" class="project-img" />
+                    <div class="project-overlay"><a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a></div>
                   </div>
                   <div class="project-content">
                     <h3 data-i18n="projects.p4_title">Headless Real Estate App</h3>
                     <p data-i18n="projects.p4_desc">Next.js frontend consuming WordPress data via GraphQL for a fast real estate listing platform.</p>
-                    <div class="project-tags">
-                      <span>Next.js</span>
-                      <span>WPGraphQL</span>
-                      <span>React</span>
-                    </div>
+                    <div class="project-tags"><span>Next.js</span><span>WPGraphQL</span><span>React</span></div>
                   </div>
                 </article>
 
                 <!-- Project 5 -->
                 <article class="project-card">
                   <div class="project-image">
-                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/0f172a/f59e0b?text=CRM+Integration" alt="WordPress Web Developer - CRM API Integration" class="project-img">
-                    <div class="project-overlay">
-                      <a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a>
-                    </div>
+                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/0f172a/f59e0b?text=CRM+Integration" alt="CRM API Integration" class="project-img" />
+                    <div class="project-overlay"><a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a></div>
                   </div>
                   <div class="project-content">
                     <h3 data-i18n="projects.p5_title">CRM API Integration</h3>
                     <p data-i18n="projects.p5_desc">Bi-directional sync between WordPress users and Salesforce CRM using scheduled cron jobs.</p>
-                    <div class="project-tags">
-                      <span>REST API</span>
-                      <span>Cron</span>
-                      <span>PHP</span>
-                    </div>
+                    <div class="project-tags"><span>REST API</span><span>Cron</span><span>PHP</span></div>
                   </div>
                 </article>
 
                 <!-- Project 6 -->
                 <article class="project-card">
                   <div class="project-image">
-                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/334155/ef4444?text=LMS+Optimization" alt="WordPress Web Developer - LMS Platform Optimization" class="project-img">
-                    <div class="project-overlay">
-                      <a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a>
-                    </div>
+                    <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/334155/ef4444?text=LMS+Optimization" alt="LMS Platform Optimization" class="project-img" />
+                    <div class="project-overlay"><a href="#" class="btn btn-primary btn-sm" data-i18n="projects.btn_view">View Project</a></div>
                   </div>
                   <div class="project-content">
                     <h3 data-i18n="projects.p6_title">LMS Platform Optimization</h3>
                     <p data-i18n="projects.p6_desc">Database query optimization and caching strategy for a learning site with 50k+ students.</p>
-                    <div class="project-tags">
-                      <span>Redis</span>
-                      <span>Query Monitor</span>
-                      <span>SQL</span>
-                    </div>
+                    <div class="project-tags"><span>Redis</span><span>Query Monitor</span><span>SQL</span></div>
                   </div>
                 </article>
-
               </div>
             </div>
 
@@ -317,23 +259,18 @@
               <i data-lucide="chevron-right"></i>
             </button>
           </div>
-          
-          <div class="carousel-indicators" id="indicators">
-            <!-- Dots generated by JS -->
-          </div>
+
+          <div class="carousel-indicators" id="indicators"></div>
         </div>
       </section>
 
-      <!-- Minimal Contact / Footer Section -->
       <section id="contact" class="section contact-minimal">
         <div class="container text-center">
           <h2 class="section-title" data-i18n="contact.title">Ready to scale your WordPress site?</h2>
           <p class="section-subtitle mb-large" data-i18n="contact.subtitle">I am available for custom plugin development and complex integrations.</p>
-          
+
           <div class="contact-actions">
-            <a href="mailto:rubenchoweb@outlook.com" class="btn btn-primary">
-              <i data-lucide="mail" class="btn-icon"></i> rubenchoweb@outlook.com
-            </a>
+            <a href="mailto:rubenchoweb@outlook.com" class="btn btn-primary"><i data-lucide="mail" class="btn-icon"></i> rubenchoweb@outlook.com</a>
           </div>
 
           <div class="footer-socials">
@@ -341,13 +278,14 @@
             <a href="#" aria-label="Linkedin"><i data-lucide="linkedin"></i></a>
             <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
           </div>
-          
+
           <div class="footer-copy">
-            <p data-i18n="contact.footer">&copy; 2025 Ruben Rodriguez. Built with HTML, CSS & Vanilla JS.</p>
+            <p data-i18n="contact.footer">&copy; 2025 Ruben Rodriguez. Built with HTML, CSS &amp; Vanilla JS.</p>
           </div>
         </div>
       </section>
     </main>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./translations.js"></script>
     <script src="./main.js"></script>
