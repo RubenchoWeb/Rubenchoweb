@@ -129,7 +129,7 @@ lucide.createIcons();
 - HTTPS enabled via GitHub Pages
 
 **Deployment flow**
-1. Push to `main`
+1. Push to `master`
 2. GitHub Pages serves the static content
 3. Updates go live quickly
 
@@ -171,7 +171,7 @@ If your team needs someone who:
 ### 📬 Contact
 
 - ✉️ Email: **rubenchoweb@outlook.com**
-- 💼 LinkedIn: *(add link)*
+- 💼 LinkedIn: *https://linkedin.com/in/rubenchoweb/*
 - 🧑‍💻 GitHub: https://github.com/RubenchoWeb
 
 ---
@@ -256,39 +256,6 @@ Sistema liviano sin librerías externas:
 ```js
 lucide.createIcons();
 ```
-
-**Nota:** cuando se inyecta HTML (ej. skills de PM o experiencia), se vuelve a ejecutar `lucide.createIcons()` para pintar iconos nuevos.
-
----
-
-### 🚀 Deploy & Dominio propio (`rubenchoweb.com`)
-
-Este portafolio puede funcionar con GitHub Pages **con o sin dominio**.
-
-**A) GitHub Pages (URL por defecto)**
-1. Repo → **Settings** → **Pages**
-2. Source: `Deploy from a branch`
-3. Branch: `main` / Folder: `/ (root)`
-4. Tu sitio queda en: `https://rubenchoweb.github.io/Rubenchoweb/`
-
-**B) Dominio propio (ej: `rubenchoweb.com`)**
-1. En GitHub Pages, agrega el dominio en **Custom domain**
-2. Crea un archivo `CNAME` en la raíz del repo con:
-   ```
-   rubenchoweb.com
-   ```
-3. Configura DNS:
-
-**Opción recomendada (A records + www CNAME)**
-- `A` @ → `185.199.108.153`
-- `A` @ → `185.199.109.153`
-- `A` @ → `185.199.110.153`
-- `A` @ → `185.199.111.153`
-- `CNAME` `www` → `rubenchoweb.github.io`
-
-4. Activa **Enforce HTTPS** en GitHub Pages cuando esté disponible.
-
-> Nota: la propagación DNS puede tardar.
 
 ---
 
