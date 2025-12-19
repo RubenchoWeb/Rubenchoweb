@@ -1,28 +1,8 @@
-import { createIcons, Menu, X, Github, ExternalLink, Mail, MapPin, Linkedin, Twitter, Layout, Server, Zap, Database, ChevronLeft, ChevronRight, Code2, Briefcase, CheckCircle } from 'lucide';
-import { translations } from './translations.js';
+//import { createIcons, Menu, X, Github, ExternalLink, Mail, MapPin, Linkedin, Twitter, Layout, Server, Zap, Database, ChevronLeft, ChevronRight, Code2, Briefcase, CheckCircle } from 'lucide';
+//import { translations } from './translations.js';
 
 // Initialize Lucide Icons
-createIcons({
-  icons: {
-    Menu,
-    X,
-    Github,
-    ExternalLink,
-    Mail,
-    MapPin,
-    Linkedin,
-    Twitter,
-    Layout,
-    Server,
-    Zap,
-    Database,
-    ChevronLeft,
-    ChevronRight,
-    Code2,
-    Briefcase,
-    CheckCircle
-  }
-});
+//lucide.createIcons();
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- Typewriter Effect Variables ---
@@ -126,12 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `).join('');
 
-    // Re-initialize icons for new elements
-    createIcons({
-      icons: { ExternalLink },
-      nameAttr: 'data-lucide',
-      attrs: { class: "lucide" }
-    });
   }
 
   function renderEducation(lang) {
@@ -158,12 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <i data-lucide="check-circle"></i> ${skill}
       </div>
     `).join('');
-
-    createIcons({
-      icons: { CheckCircle },
-      nameAttr: 'data-lucide',
-      attrs: { class: "lucide" }
-    });
+    // ✅ Re-render icons AFTER injecting HTML
+  lucide.createIcons();
   }
 
   // --- Mobile Menu Toggle ---
@@ -350,3 +320,4 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 });
+lucide.createIcons();

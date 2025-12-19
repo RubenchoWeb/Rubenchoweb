@@ -1,4 +1,4 @@
-export const translations = {
+window.translations = {
   en: {
     nav: {
       home: "Home",
