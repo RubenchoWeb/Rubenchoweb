@@ -1,13 +1,13 @@
-//import { createIcons, Menu, X, Github, ExternalLink, Mail, MapPin, Linkedin, Twitter, Layout, Server, Zap, Database, ChevronLeft, ChevronRight, Code2, Briefcase, CheckCircle } from 'lucide';
-//import { translations } from './translations.js';
+"use strict";
 
-// Initialize Lucide Icons
-//lucide.createIcons();
-
+// main.js — DOM interactions, i18n and UI behaviours
 document.addEventListener('DOMContentLoaded', () => {
+  // Safe reference to translations (translations.js defines window.translations)
+  const translations = window.translations || {};
+
   // --- Typewriter Effect Variables ---
   const textElement = document.getElementById('typewriter');
-  let phrases = translations['en'].typewriter; 
+  let phrases = (translations['en'] && translations['en'].typewriter) || [];
   let phraseIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Language Switcher Logic ---
   const langBtns = document.querySelectorAll('.lang-btn');
   let currentLang = localStorage.getItem('preferredLang') || 'en';
-  
+
   // Detect browser language if no preference stored
   if (!localStorage.getItem('preferredLang')) {
-    const browserLang = navigator.language.startsWith('es') ? 'es' : 'en';
+    const browserLang = navigator.language && navigator.language.startsWith && navigator.language.startsWith('es') ? 'es' : 'en';
     currentLang = browserLang;
   }
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
-      const translation = getNestedTranslation(translations[lang], key);
+      const translation = getNestedTranslation(translations[lang] || {}, key);
       if (translation) {
         el.textContent = translation;
       }
@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderExperience(lang) {
     const container = document.getElementById('experience-container');
-    const jobs = translations[lang].experience.jobs;
-    
+    const jobs = (translations[lang] && translations[lang].experience && translations[lang].experience.jobs) || [];
+
     container.innerHTML = jobs.map(job => `
       <div class="experience-card">
         <div class="timeline-dot"></div>
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderEducation(lang) {
     const container = document.getElementById('education-container');
-    const items = translations[lang].education.items;
+    const items = (translations[lang] && translations[lang].education && translations[lang].education.items) || [];
 
     container.innerHTML = items.map(item => `
       <div class="education-item">
@@ -125,15 +125,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderPMSkills(lang) {
     const container = document.getElementById('pm-skills-list');
-    const skills = translations[lang].pm_skills;
+    const skills = (translations[lang] && translations[lang].pm_skills) || [];
 
     container.innerHTML = skills.map(skill => `
       <div class="pm-badge">
         <i data-lucide="check-circle"></i> ${skill}
       </div>
     `).join('');
-    // ✅ Re-render icons AFTER injecting HTML
-  lucide.createIcons();
+    // Re-render icons AFTER injecting HTML
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
   }
 
   // --- Mobile Menu Toggle ---
@@ -158,34 +160,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Typewriter Functions ---
   function resetTypewriter(lang) {
     clearTimeout(typewriterTimeout);
-    phrases = translations[lang].typewriter;
+    phrases = (translations[lang] && translations[lang].typewriter) || [];
     phraseIndex = 0;
     charIndex = 0;
     isDeleting = false;
-    textElement.textContent = '';
+    if (textElement) textElement.textContent = '';
     type();
   }
 
   function type() {
-    const currentPhrase = phrases[phraseIndex];
-    
+    if (!phrases || phrases.length === 0 || !textElement) return;
+
+    const currentPhrase = phrases[phraseIndex] || '';
+
     if (isDeleting) {
       textElement.textContent = currentPhrase.substring(0, charIndex - 1);
       charIndex--;
-      typeSpeed = 50; 
+      typeSpeed = 50;
     } else {
       textElement.textContent = currentPhrase.substring(0, charIndex + 1);
       charIndex++;
-      typeSpeed = 100; 
+      typeSpeed = 100;
     }
 
     if (!isDeleting && charIndex === currentPhrase.length) {
       isDeleting = true;
-      typeSpeed = 2000; 
+      typeSpeed = 2000;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      typeSpeed = 500; 
+      typeSpeed = 500;
     }
 
     typewriterTimeout = setTimeout(type, typeSpeed);
@@ -319,5 +323,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('section[id]').forEach(section => {
     observer.observe(section);
   });
+
+  // Finalize icons rendering after initial DOM updates
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons();
+  }
 });
-lucide.createIcons();
