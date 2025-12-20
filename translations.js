@@ -181,8 +181,8 @@ window.translations = {
       p9_desc: "High-conversion landing page for heavy machinery sales company (excavators, backhoes). Optimized for lead generation with equipment specifications and inquiry forms."
     },
     contact: {
-      title: "Ready to scale your WordPress site?",
-      subtitle: "I am available for custom plugin development and complex integrations.",
+      title: "Looking to improve your website?",
+      subtitle: "I'm available to help with your project. Send me an email or connect on LinkedIn.",
       footer: "© 2025 Ruben Rodriguez. Built with HTML, CSS & Vanilla JS."
     },
     typewriter: [
@@ -385,8 +385,8 @@ window.translations = {
       p9_desc: "Landing page de alta conversión para venta de maquinaria pesada (excavadoras, retroexcavadoras). Optimizado para generación de leads con especificaciones de equipos y formularios de consulta."
     },
     contact: {
-      title: "¿Listo para escalar tu sitio WordPress?",
-      subtitle: "Estoy disponible para desarrollo de plugins personalizados e integraciones complejas.",
+      title: "¿Necesitas ayuda con tu proyecto web?",
+      subtitle: "Estoy disponible para ayudarte con tu proyecto. Envíame un correo o contáctame por LinkedIn.",
       footer: "© 2025 Ruben Rodriguez. Creado con HTML, CSS y Vanilla JS."
     },
     typewriter: [
