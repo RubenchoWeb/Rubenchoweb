@@ -795,11 +795,11 @@ pre {
   }
 
   .hero-content {
-    order: 2;
+    order: 1;
   }
 
   .hero-visual {
-    order: 1;
+    order: 2;
     margin-bottom: 30px;
   }
 

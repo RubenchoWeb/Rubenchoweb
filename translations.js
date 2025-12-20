@@ -11,7 +11,7 @@ window.translations = {
     hero: {
       greeting: "Hello, I'm",
       subtitle_prefix: "I build",
-      description: "Specialized in high-performance WordPress solutions. From custom theme development and Gutenberg blocks to complex API integrations and plugin architecture.",
+      description: "Specialized with 8+ years of experience in high-performance WordPress solutions. From custom theme development and Gutenberg blocks to complex API integrations and plugin architecture.",
       btn_projects: "View Projects",
       btn_contact: "Get in Touch"
     },
@@ -140,7 +140,7 @@ window.translations = {
     hero: {
       greeting: "Hola, soy",
       subtitle_prefix: "Desarrollo",
-      description: "Especializado en soluciones WordPress de alto rendimiento. Desde desarrollo de temas personalizados y bloques Gutenberg hasta integraciones API complejas y arquitectura de plugins.",
+      description: "Especializado con 8+ años de experiencia en soluciones WordPress de alto rendimiento. Desde desarrollo de temas personalizados y bloques Gutenberg hasta integraciones API complejas y arquitectura de plugins.",
       btn_projects: "Ver Proyectos",
       btn_contact: "Contactar"
     },
