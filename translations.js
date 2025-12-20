@@ -42,8 +42,10 @@ window.translations = {
         },
         {
           degree: "Full Stack Web Development Certification",
-          institution: "Tech Institute",
-          year: "2019"
+          institution: "Platzi",
+          year: "2019 - present",
+          url: "https://platzi.com/p/rubenchoweb/",
+          skills: ["WordPress", "CSS", "Scrum", "WooCommerce", "PHP", "JavaScript", "HTML", "Git & Github", "Bootstrap", "SEO"]
         }
       ]
     },
@@ -203,9 +205,9 @@ window.translations = {
       subtitle: "Formación Académica",
       items: [
         {
-          degree: "Ingeniería de Sistemas",
-          institution: "Universidad Tecnológica",
-          year: "2014 - 2018",
+          degree: "Ingeniería de Sistemas y Computación",
+          institution: "Universidad Católica de Colombia",
+          year: "2016 - 2021",
           coursework: [
             "Ingeniería de Software & Análisis de Sistemas",
             "Algoritmos y Estructuras de Datos",
@@ -219,8 +221,10 @@ window.translations = {
         },
         {
           degree: "Certificación Desarrollo Web Full Stack",
-          institution: "Tech Institute",
-          year: "2019"
+          institution: "Platzi",
+          year: "2019 - presente",
+          url: "https://platzi.com/p/rubenchoweb/",
+          skills: ["WordPress", "CSS", "Scrum", "WooCommerce", "PHP", "JavaScript", "HTML", "Git & Github", "Bootstrap", "SEO"]
         }
       ]
     },

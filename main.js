@@ -116,16 +116,27 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="education-item">
         <div class="edu-info">
           <h3>${item.degree}</h3>
-          <p>${item.institution}</p>
+          <p>
+            ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="edu-link">${item.institution} <i data-lucide="external-link" style="width:14px; height:14px;"></i></a>` : item.institution}
+          </p>
           ${item.coursework ? `
             <ul class="edu-coursework">
               ${item.coursework.map(course => `<li>${course}</li>`).join('')}
             </ul>
           ` : ''}
+          ${item.skills ? `
+            <div class="edu-skills">
+              ${item.skills.map(skill => `<span class="edu-skill-badge">${skill}</span>`).join('')}
+            </div>
+          ` : ''}
         </div>
         <span class="edu-year">${item.year}</span>
       </div>
     `).join('');
+    // Re-render icons after injecting HTML
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
   }
 
   function renderPMSkills(lang) {

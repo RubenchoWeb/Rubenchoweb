@@ -588,6 +588,20 @@ pre {
   margin-bottom: 12px;
 }
 
+.edu-link {
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+
+.edu-link:hover {
+  border-bottom-color: var(--primary);
+}
+
 .edu-coursework {
   list-style: none;
   padding: 0;
@@ -610,6 +624,30 @@ pre {
 .edu-coursework li:hover {
   background-color: rgba(56, 189, 248, 0.15);
   border-color: rgba(56, 189, 248, 0.4);
+}
+
+.edu-skills {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-skill-badge {
+  background-color: rgba(56, 189, 248, 0.08);
+  color: var(--primary);
+  padding: 5px 11px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.edu-skill-badge:hover {
+  background-color: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
 }
 
 .edu-year {
