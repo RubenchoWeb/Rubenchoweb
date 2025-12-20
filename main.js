@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="edu-info">
           <h3>${item.degree}</h3>
           <p>${item.institution}</p>
+          ${item.coursework ? `
+            <ul class="edu-coursework">
+              ${item.coursework.map(course => `<li>${course}</li>`).join('')}
+            </ul>
+          ` : ''}
         </div>
         <span class="edu-year">${item.year}</span>
       </div>
