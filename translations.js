@@ -110,7 +110,7 @@ window.translations = {
         {
           company: "Sitetuners",
           role: "Frontend Developer & CRO Specialist",
-          period: "2018 - 2020",
+          period: "05/2021 - 09/2021",
           url: "https://sitetuners.com",
           activities: [
             "Implemented A/B testing variations using Google Optimize and custom code.",
@@ -127,7 +127,7 @@ window.translations = {
         {
           company: "Lafam by EssilorLuxottica",
           role: "Web Master",
-          period: "2016 - 2018",
+          period: "05/2019 - 05/2021",
           url: "https://lafam.com.co",
           activities: [
             "Maintained the e-commerce platform ensuring 99.9% uptime.",
@@ -138,12 +138,28 @@ window.translations = {
             "Maintained a promotions system used nationwide by physical stores."
           ],
           tech: ["Shopify", "WordPress", "HTML", "CSS", "JavaScript", "Liquid", "PHP", "Bootstrap", "SEO"]
+        },
+        {
+          company: "Gestión Profesional",
+          role: "Web Master",
+          period: "08/2017 - 05/2019",
+          url: "https://gestionprofesional.com.co/",
+          activities: [
+            "Maintained and administered corporate website built on Joomla CMS ensuring 24/7 availability.",
+            "Proposed and successfully led complete platform migration from Joomla to WordPress for improved functionality and scalability.",
+            "Managed daily content updates including job listings, company news, and service offerings.",
+            "Created and maintained user accounts with role-based permissions for internal staff and external partners.",
+            "Coordinated with HR and marketing teams to publish recruitment campaigns and promotional content.",
+            "Implemented basic SEO optimizations to improve search engine visibility and organic traffic.",
+            "Performed regular website backups, security updates, and performance monitoring."
+          ],
+          tech: ["Joomla", "WordPress", "HTML", "CSS", "JavaScript","PHP", "Bootstrap", "SEO"]
         }
       ]
     },
     projects: {
-      title: "Selected Works",
-      subtitle: "Featured projects made with love <3",
+      title: "Highlighted Works",
+      subtitle: "Featured projects made with love ❤️",
       btn_view: "View Project",
       p1_title: "Holafly - Astro Headless Frontend",
       p1_desc: "Modern headless eCommerce application built with Astro framework consuming Holafly's API. Ultra-fast static site generation with dynamic API integration and optimized Core Web Vitals.",
@@ -170,8 +186,11 @@ window.translations = {
       footer: "© 2025 Ruben Rodriguez. Built with HTML, CSS & Vanilla JS."
     },
     typewriter: [
-      'Custom Themes', 
-      'Custom Plugins', 
+      'High performance websites',
+      'Optimized for SEO',
+      'Custom Themes',
+      'Custom Plugins',
+      'Custom Solutions',
       'Gutenberg Blocks', 
       'REST API Integrations'
     ],
@@ -323,6 +342,22 @@ window.translations = {
             "Mantuve un sistema de promociones utilizado a nivel nacional por tiendas físicas."
           ],
           tech: ["Shopify", "WordPress", "HTML", "CSS", "JavaScript", "Liquid", "PHP", "Bootstrap", "SEO"]
+        },
+        {
+          company: "Gestión Profesional",
+          role: "Web Master",
+          period: "08/2017 - 05/2019",
+          url: "https://gestionprofesional.com.co/",
+          activities: [
+            "Mantuve y administré el sitio web corporativo construido en Joomla CMS asegurando disponibilidad 24/7.",
+            "Propuse y lideré exitosamente la migración completa de la plataforma de Joomla a WordPress para mejorar funcionalidad y escalabilidad.",
+            "Gestioné actualizaciones diarias de contenido incluyendo ofertas de empleo, noticias de la empresa y servicios ofrecidos.",
+            "Creé y mantuve cuentas de usuario con permisos basados en roles para personal interno y socios externos.",
+            "Coordiné con equipos de RRHH y marketing para publicar campañas de reclutamiento y contenido promocional.",
+            "Implementé optimizaciones SEO básicas para mejorar visibilidad en motores de búsqueda y tráfico orgánico.",
+            "Realicé respaldos regulares del sitio, actualizaciones de seguridad y monitoreo de rendimiento."
+          ],
+          tech: ["Joomla", "WordPress", "HTML", "CSS", "JavaScript","PHP", "Bootstrap", "SEO"]
         }
       ]
     },
