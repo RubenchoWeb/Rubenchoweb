@@ -34,13 +34,25 @@ window.translations = {
       },
       experience: {
         section: "Experience",
-        label: "Work experience",
-        hint_html: "Block format:<br />Company | Role | City, Country | Date | duty 1; duty 2; duty 3<br /><br />Separate each job with a blank line."
+        add_btn: "+ Add experience",
+        item_title: "Experience",
+        company: "Company name",
+        role: "Role",
+        location: "Location",
+        start_date: "Start date",
+        end_date: "End date",
+        current_job: "I currently work here",
+        present: "Present",
+        bullets: "Responsibilities (one per line)"
       },
       education: {
         section: "Education",
-        label: "Education",
-        hint_html: "Format:<br />Institution | Degree | City, Country | Date"
+        add_btn: "+ Add education",
+        item_title: "Education",
+        degree: "Degree",
+        institution: "Institution",
+        duration: "Duration",
+        location: "Location"
       },
       skills: {
         section: "Skills and certifications",
@@ -56,7 +68,8 @@ window.translations = {
       },
       actions: {
         generate: "Generate resume",
-        print: "Print / PDF"
+        print: "Save PDF",
+        remove: "Remove"
       },
       preview: {
         profile: "Professional summary",
@@ -85,16 +98,57 @@ window.translations = {
       },
       defaults: {
         fullName: "Ruben Rodriguez",
-        headline: "WordPress Developer | Shopify | Frontend Developer",
-        email: "ruben@email.com",
+        headline: "Web Developer | Wordpress Shopify | E-commerce",
+        email: "rubenchoweb@outlook.com",
         linkedin: "linkedin.com/in/rubenrodriguez",
         location: "Medellin, Colombia",
         profile:
-          "Web developer with experience in WordPress, Shopify, and frontend implementation. Focused on creating, customizing, and optimizing websites, landing pages, forms, and conversion-oriented digital experiences. Experienced collaborating with clients, UI adjustments, and practical solutions for business environments.",
-        experience:
-          "Freelance / Digital projects|WordPress and Frontend Developer|Medellin, Colombia|2022 - Present|Development and customization of WordPress websites.;Implementation of user-focused interfaces and forms.;Visual adjustments, integrations, and functional improvements in web projects.;Optimization of pages for campaigns, lead capture, and product showcase.;Technical support and maintenance for production websites.\n\nEcommerce Projects|Shopify and Frontend Developer|Remote|2021 - Present|Shopify store setup and customization.;Implementation of sections, components, and theme adjustments.;Responsive frontend adaptation of designs.;Client collaboration to define requirements and improvements on existing stores.",
-        education:
-          "Professional training|Web development and frontend|Colombia|Add dates\n\nCourses and continuous learning|WordPress, Shopify, UI, CSS, JavaScript|Online|In progress",
+          "Web Developer with 8+ years of experience specializing in eCommerce platforms (WordPress, Shopify, and other CMS), focused on building high-converting websites, landing pages, and scalable marketing funnels.\n\nExperienced working with marketing agencies and cross-functional teams to deliver solutions aligned with paid media, CRO strategies, and business growth. Skilled in CRM integrations, technical SEO, and performance optimization.\n\nStrong ability to bridge marketing and development, combining no-code/low-code tools with custom code to deliver efficient, results-driven web solutions.",
+        experienceItems: [
+          {
+            company: "Freelance / Digital Projects",
+            title: "WordPress and Frontend Developer",
+            location: "Medellin, Colombia",
+            startDate: "2022-01",
+            endDate: "",
+            isCurrent: true,
+            bullets: [
+              "Development and customization of WordPress websites.",
+              "Implementation of user-focused interfaces and forms.",
+              "Visual adjustments, integrations, and functional improvements in web projects.",
+              "Optimization of pages for campaigns, lead capture, and product showcase.",
+              "Technical support and maintenance for production websites."
+            ]
+          },
+          {
+            company: "Ecommerce Projects",
+            title: "Shopify and Frontend Developer",
+            location: "Remote",
+            startDate: "2021-01",
+            endDate: "",
+            isCurrent: true,
+            bullets: [
+              "Shopify store setup and customization.",
+              "Implementation of sections, components, and theme adjustments.",
+              "Responsive frontend adaptation of designs.",
+              "Client collaboration to define requirements and improvements on existing stores."
+            ]
+          }
+        ],
+        educationItems: [
+          {
+            degree: "Professional Training",
+            institution: "Web development and frontend",
+            duration: "Add dates",
+            location: "Colombia"
+          },
+          {
+            degree: "Continuous courses and learning",
+            institution: "WordPress, Shopify, UI, CSS, JavaScript",
+            duration: "In progress",
+            location: "Online"
+          }
+        ],
         skills:
           "WordPress, Shopify, HTML, CSS, JavaScript, UI Frontend, Responsive Design, Forms, Landing Pages, Web integrations, Visual optimization, Technical support",
         certifications:
@@ -139,13 +193,25 @@ window.translations = {
       },
       experience: {
         section: "Experiencia",
-        label: "Experiencia laboral",
-        hint_html: "Formato por bloque:<br />Empresa | Cargo | Ciudad, País | Fecha | función 1; función 2; función 3<br /><br />Separa cada trabajo con una línea en blanco."
+        add_btn: "+ Agregar experiencia",
+        item_title: "Experiencia",
+        company: "Nombre empresa",
+        role: "Cargo",
+        location: "Lugar",
+        start_date: "Fecha de ingreso",
+        end_date: "Fecha de retiro",
+        current_job: "Actualmente trabajo aquí",
+        present: "Actualidad",
+        bullets: "Funciones (una por línea)"
       },
       education: {
         section: "Educación",
-        label: "Educación",
-        hint_html: "Formato:<br />Institución | Título | Ciudad, País | Fecha"
+        add_btn: "+ Agregar educación",
+        item_title: "Educación",
+        degree: "Título",
+        institution: "Institución",
+        duration: "Duración",
+        location: "Lugar"
       },
       skills: {
         section: "Habilidades y certificaciones",
@@ -161,7 +227,8 @@ window.translations = {
       },
       actions: {
         generate: "Generar CV",
-        print: "Imprimir / PDF"
+        print: "Guardar PDF",
+        remove: "Eliminar"
       },
       preview: {
         profile: "Perfil profesional",
@@ -190,16 +257,57 @@ window.translations = {
       },
       defaults: {
         fullName: "Ruben Rodriguez",
-        headline: "Desarrollador WordPress | Shopify | Frontend Developer",
-        email: "ruben@email.com",
+        headline: "Web Developer | Wordpress Shopify | E-commerce",
+        email: "rubenchoweb@outlook.com",
         linkedin: "linkedin.com/in/rubenrodriguez",
         location: "Medellín, Colombia",
         profile:
           "Desarrollador web con experiencia en WordPress, Shopify y maquetación frontend. Enfocado en la creación, personalización y optimización de sitios web, landing pages, formularios y experiencias digitales orientadas a conversión. Experiencia trabajando con clientes, ajustes UI y soluciones prácticas para entornos de negocio.",
-        experience:
-          "Freelance / Proyectos digitales|Desarrollador WordPress y Frontend|Medellín, Colombia|2022 - Actualidad|Desarrollo y personalización de sitios en WordPress.;Maquetación de interfaces y formularios enfocados en experiencia de usuario.;Implementación de ajustes visuales, integraciones y mejoras funcionales en proyectos web.;Optimización de páginas para campañas, captación de leads y presentación de productos.;Soporte técnico y mantenimiento para sitios en producción.\n\nProyectos eCommerce|Desarrollador Shopify y Frontend|Remoto|2021 - Actualidad|Configuración y personalización de tiendas Shopify.;Implementación de secciones, componentes y ajustes en temas.;Adaptación de diseños a frontend responsive.;Trabajo con clientes para aterrizar requerimientos y mejoras sobre tiendas existentes.",
-        education:
-          "Formación profesional|Desarrollo web y frontend|Colombia|Agregar fechas\n\nCursos y aprendizaje continuo|WordPress, Shopify, UI, CSS, JavaScript|Online|En curso",
+        experienceItems: [
+          {
+            company: "Freelance / Proyectos digitales",
+            title: "Desarrollador WordPress y Frontend",
+            location: "Medellín, Colombia",
+            startDate: "2022-01",
+            endDate: "",
+            isCurrent: true,
+            bullets: [
+              "Desarrollo y personalización de sitios en WordPress.",
+              "Maquetación de interfaces y formularios enfocados en experiencia de usuario.",
+              "Implementación de ajustes visuales, integraciones y mejoras funcionales en proyectos web.",
+              "Optimización de páginas para campañas, captación de leads y presentación de productos.",
+              "Soporte técnico y mantenimiento para sitios en producción."
+            ]
+          },
+          {
+            company: "Proyectos eCommerce",
+            title: "Desarrollador Shopify y Frontend",
+            location: "Remoto",
+            startDate: "2021-01",
+            endDate: "",
+            isCurrent: true,
+            bullets: [
+              "Configuración y personalización de tiendas Shopify.",
+              "Implementación de secciones, componentes y ajustes en temas.",
+              "Adaptación de diseños a frontend responsive.",
+              "Trabajo con clientes para aterrizar requerimientos y mejoras sobre tiendas existentes."
+            ]
+          }
+        ],
+        educationItems: [
+          {
+            degree: "Formación profesional",
+            institution: "Desarrollo web y frontend",
+            duration: "Agregar fechas",
+            location: "Colombia"
+          },
+          {
+            degree: "Cursos y aprendizaje continuo",
+            institution: "WordPress, Shopify, UI, CSS, JavaScript",
+            duration: "En curso",
+            location: "Online"
+          }
+        ],
         skills:
           "WordPress, Shopify, HTML, CSS, JavaScript, UI Frontend, Responsive Design, Formularios, Landing Pages, Integraciones web, Optimización visual, Soporte técnico",
         certifications:

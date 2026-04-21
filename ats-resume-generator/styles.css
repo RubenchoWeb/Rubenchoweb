@@ -198,6 +198,61 @@ a {
   color: #d6ecf7;
 }
 
+.dynamic-item {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.dynamic-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #d6ecf7;
+  font-size: 13px;
+}
+
+.item-remove-btn {
+  border: 1px solid rgba(239, 68, 68, 0.45);
+  background: rgba(239, 68, 68, 0.12);
+  color: #fecaca;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.item-remove-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.checkbox-row {
+  margin: 2px 0 10px;
+}
+
+.check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #c3d7e8;
+  cursor: pointer;
+}
+
+.check-label input[type="checkbox"] {
+  accent-color: var(--primary);
+}
+
 .field {
   margin-bottom: 12px;
 }
@@ -234,6 +289,10 @@ a {
   resize: vertical;
 }
 
+.dynamic-item .field textarea {
+  min-height: 84px;
+}
+
 .hint {
   font-size: 12px;
   color: #9fb3c8;
@@ -266,6 +325,10 @@ button.btn-primary {
 .btn-secondary {
   background: #e2e8f0;
   color: #111827;
+}
+
+.btn-add {
+  padding: 10px 14px;
 }
 
 .preview-wrap {
@@ -394,6 +457,51 @@ button.btn-primary {
   font-family: Arial, sans-serif;
 }
 
+.experience-item {
+  border-bottom: 1px solid #b9bcc1;
+  padding: 12px 0 10px;
+  margin-bottom: 14px;
+}
+
+.experience-item:last-child {
+  border-bottom: 0;
+}
+
+.experience-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.experience-main .job-company {
+  font-size: 20px;
+  color: #0e2a56;
+  font-weight: 700;
+}
+
+.experience-main .job-title {
+  font-size: 16px;
+  color: #143b72;
+}
+
+.experience-meta {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.experience-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.experience-meta-icon {
+  font-size: 14px;
+}
+
 .job-company,
 .education-school {
   font-size: 14px;
@@ -405,7 +513,7 @@ button.btn-primary {
   font-size: 13px;
   color: #555;
   white-space: nowrap;
-  text-align: right;
+  text-align: left;
 }
 
 .job-title,
@@ -419,17 +527,25 @@ button.btn-primary {
 .education-date {
   font-size: 13px;
   color: #555;
-  text-align: right;
+  text-align: left;
   white-space: nowrap;
 }
 
 .job-bullets {
-  margin: 8px 0 0 18px;
+  margin: 10px 0 0 26px;
   padding: 0;
   font-family: Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.55;
   color: #333;
+}
+
+.job-bullets li {
+  margin-bottom: 8px;
+}
+
+.job-bullets li:last-child {
+  margin-bottom: 0;
 }
 
 .cert-list {
@@ -531,6 +647,13 @@ button.btn-primary {
   transform: translateY(-3px);
 }
 
+.footer-socials a svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
+}
+
 .footer-copy {
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -630,10 +753,24 @@ button.btn-primary {
     grid-template-columns: 1fr;
   }
 
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
   .experience-head,
   .education-head {
     flex-direction: column;
     gap: 4px;
+  }
+
+  .experience-top {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .experience-meta {
+    grid-column: 1 / -1;
+    margin-top: 2px;
   }
 
   .job-location,
@@ -646,6 +783,17 @@ button.btn-primary {
 }
 
 @media print {
+  @page {
+    size: Letter portrait;
+    margin: 0.45in;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: auto;
+  }
+
   body {
     background: #fff;
   }
@@ -675,9 +823,33 @@ button.btn-primary {
 
   .cv-sheet {
     width: 100%;
+    min-height: auto;
+    max-width: none;
     box-shadow: none;
     border-radius: 0;
     margin: 0;
-    padding: 18px 20px;
+    padding: 0;
+  }
+
+  .experience-top {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .experience-meta {
+    grid-column: auto;
+    margin-top: 0;
+    justify-items: end;
+  }
+
+  .experience-meta-line {
+    white-space: nowrap;
+  }
+
+  .job-location,
+  .job-date {
+    white-space: nowrap;
+    text-align: right;
   }
 }
+
