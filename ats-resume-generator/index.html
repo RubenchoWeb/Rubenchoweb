@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATS Resume Generator | Rubenchoweb</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">Rubencho<span class="highlight">Web</span>.com</a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+          <li><a href="../index.html#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="../index.html#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="../index.html#education" class="nav-link" data-i18n="nav.education">Education</a></li>
+          <li><a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="./index.html" class="nav-link active" data-i18n="nav.cv_generator">CV generator</a></li>
+          <li><a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-divider">/</span>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+
+        <button class="close-menu-btn" id="close-menu" aria-label="Close menu">
+          <i data-lucide="x"></i>
+        </button>
+      </nav>
+
+      <button class="hamburger-btn" id="hamburger" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="ats-page">
+    <div class="app">
+    <aside class="sidebar">
+      <h1 data-i18n="ats.title">Generador de CV ATS</h1>
+      <p data-i18n="ats.subtitle">Llena el formulario y genera un CV limpio, profesional y listo para imprimir o guardar como PDF.</p>
+
+      <div class="form-section">
+        <h2 data-i18n="ats.photo.section">Foto de perfil</h2>
+
+        <div class="field">
+          <label for="photo" data-i18n="ats.photo.label">Subir foto (opcional)</label>
+          <input type="file" id="photo" accept="image/*" />
+          <div class="hint" data-i18n="ats.photo.hint">Si no subes foto, se mostrarán tus iniciales.</div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2 data-i18n="ats.personal.section">Información personal</h2>
+
+        <div class="field">
+          <label for="fullName" data-i18n="ats.personal.full_name">Nombre completo</label>
+          <input type="text" id="fullName" value="Ruben Rodriguez" />
+        </div>
+
+        <div class="field">
+          <label for="headline" data-i18n="ats.personal.headline">Cargo / titular profesional</label>
+          <input
+            type="text"
+            id="headline"
+            value="Desarrollador WordPress | Shopify | Frontend Developer"
+          />
+        </div>
+
+        <div class="field">
+          <label for="email" data-i18n="ats.personal.email">Email</label>
+          <input type="text" id="email" value="ruben@email.com" />
+        </div>
+
+        <div class="field">
+          <label for="linkedin" data-i18n="ats.personal.linkedin">LinkedIn</label>
+          <input type="text" id="linkedin" value="linkedin.com/in/rubenrodriguez" />
+        </div>
+
+        <div class="field">
+          <label for="location" data-i18n="ats.personal.location">Ubicación</label>
+          <input type="text" id="location" value="Medellín, Colombia" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2 data-i18n="ats.profile.section">Perfil profesional</h2>
+
+        <div class="field">
+          <label for="profile" data-i18n="ats.profile.label">Resumen profesional</label>
+          <textarea id="profile">Desarrollador web con experiencia en WordPress, Shopify y maquetación frontend. Enfocado en la creación, personalización y optimización de sitios web, landing pages, formularios y experiencias digitales orientadas a conversión. Experiencia trabajando con clientes, ajustes UI y soluciones prácticas para entornos de negocio.</textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2 data-i18n="ats.experience.section">Experiencia</h2>
+
+        <div class="field">
+          <label for="experience" data-i18n="ats.experience.label">Experiencia laboral</label>
+          <textarea id="experience">Freelance / Proyectos digitales|Desarrollador WordPress y Frontend|Medellín, Colombia|2022 - Actualidad|Desarrollo y personalización de sitios en WordPress.;Maquetación de interfaces y formularios enfocados en experiencia de usuario.;Implementación de ajustes visuales, integraciones y mejoras funcionales en proyectos web.;Optimización de páginas para campañas, captación de leads y presentación de productos.;Soporte técnico y mantenimiento para sitios en producción.
+
+Proyectos eCommerce|Desarrollador Shopify y Frontend|Remoto|2021 - Actualidad|Configuración y personalización de tiendas Shopify.;Implementación de secciones, componentes y ajustes en temas.;Adaptación de diseños a frontend responsive.;Trabajo con clientes para aterrizar requerimientos y mejoras sobre tiendas existentes.</textarea>
+          <div class="hint" data-i18n="ats.experience.hint_html">
+            Formato por bloque:<br />
+            Empresa | Cargo | Ciudad, País | Fecha | función 1; función 2; función 3<br /><br />
+            Separa cada trabajo con una línea en blanco.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2 data-i18n="ats.education.section">Educación</h2>
+
+        <div class="field">
+          <label for="education" data-i18n="ats.education.label">Educación</label>
+          <textarea id="education">Formación profesional|Desarrollo web y frontend|Colombia|Agregar fechas
+
+Cursos y aprendizaje continuo|WordPress, Shopify, UI, CSS, JavaScript|Online|En curso</textarea>
+          <div class="hint" data-i18n="ats.education.hint_html">
+            Formato:<br />
+            Institución | Título | Ciudad, País | Fecha
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2 data-i18n="ats.skills.section">Habilidades y certificaciones</h2>
+
+        <div class="field">
+          <label for="skills" data-i18n="ats.skills.label">Habilidades</label>
+          <textarea id="skills">WordPress, Shopify, HTML, CSS, JavaScript, UI Frontend, Responsive Design, Formularios, Landing Pages, Integraciones web, Optimización visual, Soporte técnico</textarea>
+        </div>
+
+        <div class="field">
+          <label for="certifications" data-i18n="ats.certifications.label">Certificaciones</label>
+          <textarea id="certifications">Puedes agregar aquí certificaciones, cursos o programas relevantes relacionados con desarrollo web, WordPress, Shopify, frontend o marketing digital.</textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2 data-i18n="ats.passions.section">Pasiones / intereses</h2>
+
+        <div class="field">
+          <label for="passions" data-i18n="ats.passions.label">Pasiones</label>
+          <textarea id="passions">Desarrollo web|Interés en construir sitios funcionales, claros y bien estructurados que ayuden a resolver necesidades reales de negocio.
+
+Diseño UI|Motivado por mejorar la interfaz visual, la organización de formularios y la experiencia del usuario.
+
+Tecnología y aprendizaje continuo|Interés constante por mejorar habilidades técnicas y explorar nuevas herramientas para desarrollo y automatización.</textarea>
+          <div class="hint" data-i18n="ats.passions.hint_html">
+            Formato:<br />
+            Título | Descripción<br />
+            Separa cada pasión con una línea en blanco.
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-primary" id="generateBtn" type="button" data-i18n="ats.actions.generate">Generar CV</button>
+        <button class="btn-secondary" id="printBtn" type="button" data-i18n="ats.actions.print">Imprimir / PDF</button>
+      </div>
+    </aside>
+
+    <div class="preview-wrap">
+      <section class="cv-sheet" id="cvSheet">
+        <header class="cv-header">
+          <div class="avatar-circle" id="avatarCircle">
+            <img id="previewPhoto" alt="Foto de perfil" />
+            <span id="previewInitials">RR</span>
+          </div>
+
+          <h1 class="cv-name" id="previewName">RUBEN RODRIGUEZ</h1>
+
+          <div class="cv-role" id="previewHeadline">
+            Desarrollador WordPress | Shopify | Frontend Developer
+          </div>
+
+          <div class="cv-meta">
+            <span id="previewEmail">ruben@email.com</span>
+            <span class="separator-dot">•</span>
+            <span id="previewLinkedin">linkedin.com/in/rubenrodriguez</span>
+            <span class="separator-dot">•</span>
+            <span id="previewLocation">Medellín, Colombia</span>
+          </div>
+        </header>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title" data-i18n="ats.preview.profile">Perfil profesional</h2>
+          <div class="section-line"></div>
+          <div class="profile-text" id="previewProfile"></div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title" data-i18n="ats.preview.experience">Experiencia</h2>
+          <div class="section-line"></div>
+          <div id="previewExperience"></div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title" data-i18n="ats.preview.education">Educación</h2>
+          <div class="section-line"></div>
+          <div id="previewEducation"></div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title" data-i18n="ats.preview.skills">Habilidades</h2>
+          <div class="section-line"></div>
+          <div class="skills-text" id="previewSkills"></div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title" data-i18n="ats.preview.certifications">Certificaciones</h2>
+          <div class="section-line"></div>
+          <div class="cert-list" id="previewCertifications"></div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title" data-i18n="ats.preview.passions">Pasiones</h2>
+          <div class="section-line"></div>
+          <div class="passions-grid" id="previewPassions"></div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <div class="contact-actions">
+        <a href="mailto:rubenchoweb@outlook.com" class="btn btn-primary">
+          <i data-lucide="mail" class="btn-icon"></i> rubenchoweb@outlook.com
+        </a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/RubenchoWeb" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/rubenchoweb/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
+          <i data-lucide="linkedin"></i>
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        <p data-i18n="ats.footer.copy">&copy; 2025 Ruben Rodriguez. Built with HTML, CSS &amp; Vanilla JS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
