@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main class="pokedex">
+      <section class="pokedex-cover" aria-label="Pokedex">
+        <div class="pokedex-top">
+          <div class="camera-light"></div>
+          <div class="mini-light red"></div>
+          <div class="mini-light yellow"></div>
+          <div class="mini-light green"></div>
+        </div>
+
+        <div class="brand-row">
+          <div>
+            <p class="eyebrow">PokeAPI Explorer</p>
+            <h1>Pokedex</h1>
+          </div>
+          <p class="intro">Busca por nombre, tipo, generacion o color.</p>
+        </div>
+
+        <section class="screen-frame">
+          <div class="screen-speakers">
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="screen">
+            <section class="search-panel" aria-label="Buscador de Pokemon">
+              <div class="field">
+                <label for="searchMode">Tipo de busqueda</label>
+                <select id="searchMode">
+                  <option value="name">Nombre</option>
+                  <option value="type">Tipo</option>
+                  <option value="generation">Generacion</option>
+                  <option value="color">Color</option>
+                </select>
+              </div>
+
+              <div class="field" id="searchContent"></div>
+
+              <div class="field">
+                <label for="resultLimit">Por pagina</label>
+                <select id="resultLimit">
+                  <option value="12">12 Pokemon</option>
+                  <option value="24" selected>24 Pokemon</option>
+                  <option value="48">48 Pokemon</option>
+                  <option value="96">96 Pokemon</option>
+                </select>
+              </div>
+
+              <div class="actions">
+                <button id="searchButton" type="button">Buscar</button>
+                <button id="clearButton" type="button" class="secondary">Limpiar</button>
+              </div>
+            </section>
+
+            <section class="status-row" aria-live="polite">
+              <p id="statusText">Elige un filtro para comenzar.</p>
+            </section>
+
+            <section id="results" class="pokemon-grid" aria-label="Resultados"></section>
+
+            <nav class="pagination" aria-label="Paginacion de resultados">
+              <button id="prevPageButton" type="button" class="secondary">Anterior</button>
+              <span id="pageInfo">Pagina 0 de 0</span>
+              <button id="nextPageButton" type="button" class="secondary">Siguiente</button>
+            </nav>
+
+            <section id="pokemonDetail" class="pokemon-detail" hidden aria-live="polite" aria-label="Detalle del Pokemon"></section>
+          </div>
+        </section>
+
+        <div class="control-deck" aria-hidden="true">
+          <div class="d-pad">
+            <span></span>
+          </div>
+          <div class="control-buttons">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="speaker-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

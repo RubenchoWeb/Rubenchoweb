@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Invoice Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../components/components.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="has-shared-header" data-base-path="../" data-active-nav="invoice_generator">
+  <div data-component="../components/header.html"></div>
 
   <div class="app">
     <div class="panel">
@@ -120,6 +125,11 @@ Please include the invoice number in the payment reference.</textarea>
     </div>
   </div>
 
+  <div data-component="../components/footer.html"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../translations.js"></script>
+  <script src="../components/component-loader.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

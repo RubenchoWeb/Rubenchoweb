@@ -1,9 +1,12 @@
 "use strict";
 
 // main.js — DOM interactions, i18n and UI behaviours
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await (window.componentsReady || Promise.resolve());
+
   // Safe reference to translations (translations.js defines window.translations)
   const translations = window.translations || {};
+  const navLinks = document.querySelectorAll('a.nav-link');
 
   // --- Typewriter Effect Variables ---
   const textElement = document.getElementById('typewriter');
@@ -153,25 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
       window.lucide.createIcons();
     }
   }
-
-  // --- Mobile Menu Toggle ---
-  const hamburger = document.getElementById('hamburger');
-  const closeMenu = document.getElementById('close-menu');
-  const navMenu = document.getElementById('nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  function toggleMenu() {
-    navMenu.classList.toggle('active');
-  }
-
-  hamburger.addEventListener('click', toggleMenu);
-  closeMenu.addEventListener('click', toggleMenu);
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-    });
-  });
 
   // --- Typewriter Functions ---
   function resetTypewriter(lang) {
@@ -327,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.forEach(link => link.classList.remove('active'));
         
         // Add active class to corresponding link
-        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+        const activeLink = document.querySelector(`a.nav-link[href$="#${id}"]`);
         if (activeLink) {
           activeLink.classList.add('active');
         }

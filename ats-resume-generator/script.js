@@ -404,7 +404,9 @@ function getDragAfterElement(container, y) {
   ).element;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  await (window.componentsReady || Promise.resolve());
+
   const translations = window.translations || {};
   const langBtns = document.querySelectorAll(".lang-btn");
   const experienceList = document.getElementById("experienceList");
@@ -1474,22 +1476,6 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const lang = btn.getAttribute("data-lang");
       setLanguage(lang);
-    });
-  });
-
-  const navMenu = document.getElementById("nav-menu");
-  const hamburgerBtn = document.getElementById("hamburger");
-  const closeMenuBtn = document.getElementById("close-menu");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  if (hamburgerBtn && closeMenuBtn && navMenu) {
-    hamburgerBtn.addEventListener("click", () => navMenu.classList.add("active"));
-    closeMenuBtn.addEventListener("click", () => navMenu.classList.remove("active"));
-  }
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (navMenu) navMenu.classList.remove("active");
     });
   });
 

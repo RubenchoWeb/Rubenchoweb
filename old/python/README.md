@@ -1,1 +1,0 @@
-## install pip install pyautogui for auto_mouse.py

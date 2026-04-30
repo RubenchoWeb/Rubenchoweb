@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>CRUD Js usando local storage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"><img src="./img/JavaScript_logo.png" alt="JavaScript_logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#about">Descripción </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#CRUD">¿Que es un CRUD?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#formulario">Formulario</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+    <section id="about">
+        <h2>
+            Sobre el proyecto
+        </h2>
+        <p>
+            En este proyecto se trabajará las 4 partes de un <a href="#CRUD"> CRUD</a> por medio de Javascript almacenando los datos en localStorage
+        </p>
+    </section>
+
+    <section id="CRUD">
+        <h2>
+            ¿Que es un CRUD?
+        </h2>
+        <p>
+            CRUD (Create, Read, Update, Delete) es un acrónimo para las maneras en las que se puede operar sobre información almacenada. Es un nemónico para las cuatro funciones del almacenamiento persistente. CRUD usualmente se refiere a operaciones llevadas a cabo en una base de datos o un almácen de datos, pero también pude aplicar a funciones de un nivel superior de una aplicación como soft deletes donde la información no es realmente eliminada, sino es marcada como eliminada a tráves de un estatus.
+        </p>
+    </section>
+
+    <section id="formulario">
+        <fieldset>
+            <legend>
+              <h2>Ingresa los datos del trabajador</h2>
+            </legend>
+            <form id="form" onreset="clear()">
+              <input type="text" id="name" name="name" placeholder="Nombre"><br><br>
+              <input type="text" id="job" name="job" placeholder="Trabajo"><br><br>
+              <input type="text" id="exp" name="exp" placeholder="Experiencia"><br><br>
+              <input type="button" value="Ingresar" id="btn" onclick="Submit()">
+              <input type="button" onclick="resetForm();" value="Limpiar datos">
+              
+              
+            </form>
+          </fieldset>
+        
+        
+          <br>
+          <div id="msg"></div>
+        
+        
+          <fieldset>
+            <legend>
+              <h2>Datos almacenados en Local Storage</h2>
+            </legend>
+        
+            <table border="2" id="table">
+              <thead>
+                <tr>
+                  <td class="col">Nombre</td>
+                  <td class="col">Trabajo</td>
+                  <td class="col">Experiencia</td>
+                  <td class="col">Modificar</td>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+
+              </tbody>
+              
+            </table>
+          </fieldset>
+    </section>
+
+  <!-- Footer -->
+<footer class="page-footer font-small indigo">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Referencias</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+                <a href="https://developer.mozilla.org/es/docs/Glossary/CRUD" target="_blank">Mozilla</a>
+              </li>
+            <li>
+              <a href="https://www.javascript.com/" target="_blank">Javascript</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Recursos</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://getbootstrap.com/" target="_blank">Bootstrap 4</a>
+            </li>
+            <li>
+              <a href="https://mdbootstrap.com/" target="_blank">mdbootstrap.com</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/" target="_blank">www.w3schools</a>
+            </li>
+            <li>
+              <a href="https://github.com/" target="_blank">Git - Github</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Lenguajes</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">HTML5</a>
+            </li>
+            <li>
+              <a href="#">CSS3</a>
+            </li>
+            <li>
+              <a href="#">Javascript</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">RRSS</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+                <a href="https://rubenchoweb.com/" target="_blank"><i class="bi bi-globe2"></i> Website</a>
+            </li>
+            <li>
+                <a href="https://github.com/RubenchoWeb" target="_blank"><i class="bi bi-github"></i> Github</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rubenchoweb/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/rubenchoweb/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        Sitio creado con fines academicos <br>
+        © 2022 Copyright:
+      <a href="#"> rubenchoweb.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

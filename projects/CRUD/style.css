@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(18, 18, 57);
+    color: white;
+    margin: auto 5%;
+    text-align: center;
+  }
+  
+  table{
+    border-color: white;
+  }
+
+  footer{
+    margin-top: 50px;
+  }
+
+  #table{
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 991px) {
+    
+    body{
+        font-size: x-large;
+    }
+    
+    #table{
+        max-width: 90%;
+        margin: 0 auto;
+      }
+}
+  
+  
+  td {
+    padding: 8px 16px;
+  }
+  
+  .col {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f7e018;
+    max-width: 30%;
+  }
+  
+  tr{
+  background-color: rgb(165, 233, 255);
+  color: black;
+  text-align: center;
+  }
+  
+  input{
+    font-size: 16px;
+  }
+  
+  header{
+    margin-bottom: 50px;
+  }

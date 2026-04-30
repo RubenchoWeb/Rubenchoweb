@@ -6,6 +6,9 @@ window.translations = {
       experience: "Experience",
       education: "Education",
       projects: "Projects",
+      tools: "Tools",
+      cv_generator: "CV generator",
+      invoice_generator: "Invoice generator",
       contact: "Contact"
     },
     hero: {
@@ -185,6 +188,9 @@ window.translations = {
       subtitle: "I'm available to help with your project. Send me an email or connect on LinkedIn.",
       footer: "© 2025 Ruben Rodriguez. Built with HTML, CSS & Vanilla JS."
     },
+    footer: {
+      copy: "© 2026 Ruben Rodriguez. Built with HTML, CSS & Vanilla JS."
+    },
     typewriter: [
       'High performance websites',
       'Optimized for SEO',
@@ -210,6 +216,9 @@ window.translations = {
       experience: "Experiencia",
       education: "Educación",
       projects: "Proyectos",
+      tools: "Herramientas",
+      cv_generator: "Generador de CV",
+      invoice_generator: "Generador de facturas",
       contact: "Contacto"
     },
     hero: {
@@ -388,6 +397,9 @@ window.translations = {
       title: "¿Necesitas ayuda con tu proyecto web?",
       subtitle: "Estoy disponible para ayudarte con tu proyecto. Envíame un correo o contáctame por LinkedIn.",
       footer: "© 2025 Ruben Rodriguez. Creado con HTML, CSS y Vanilla JS."
+    },
+    footer: {
+      copy: "© 2026 Ruben Rodriguez. Creado con HTML, CSS y Vanilla JS."
     },
     typewriter: [
       'Temas Personalizados', 

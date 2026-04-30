@@ -10,7 +10,9 @@ window.translations = {
       education: "Education",
       projects: "Projects",
       contact: "Contact",
-      cv_generator: "CV generator"
+      tools: "Tools",
+      cv_generator: "CV generator",
+      invoice_generator: "Invoice generator"
     },
     ats: {
       title: "ATS Resume Generator",
@@ -269,6 +271,9 @@ window.translations = {
         passions:
           "Desarrollo web - Interés en construir sitios funcionales, claros y bien estructurados que resuelvan necesidades reales de negocio.\nDiseño UI - Motivado por mejorar interfaces visuales, organización de formularios y experiencia del usuario.\nTecnología y aprendizaje continuo - Interés constante en mejorar habilidades técnicas y explorar nuevas herramientas de desarrollo y automatización."
       }
+    },
+    footer: {
+      copy: "© 2026 Ruben Rodriguez. Built with HTML, CSS & Vanilla JS."
     }
   },
   es: {
@@ -282,7 +287,9 @@ window.translations = {
       education: "Educación",
       projects: "Proyectos",
       contact: "Contacto",
-      cv_generator: "CV generator"
+      tools: "Herramientas",
+      cv_generator: "Generador de CV",
+      invoice_generator: "Generador de facturas"
     },
     ats: {
       title: "Generador de CV ATS",
@@ -541,6 +548,9 @@ window.translations = {
         passions:
           "Web development - Interest in building functional, clear, and well-structured websites that solve real business needs.\nUI design - Motivated by improving visual interfaces, form organization, and user experience.\nTechnology and continuous learning - Constant interest in improving technical skills and exploring new tools for development and automation."
       }
+    },
+    footer: {
+      copy: "© 2026 Ruben Rodriguez. Creado con HTML, CSS y Vanilla JS."
     }
   }
 };
