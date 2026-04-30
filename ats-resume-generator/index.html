@@ -46,111 +46,169 @@
     <div class="app">
     <aside class="sidebar">
       <h1 data-i18n="ats.title">Generador de CV ATS</h1>
-      <p data-i18n="ats.subtitle">Llena el formulario y genera un CV limpio, profesional y listo para imprimir o guardar como PDF.</p>
+      <p data-i18n="ats.subtitle">Puedes llenar el formulario manualmente o cargar un CSV para completar automáticamente tu CV.</p>
+      <div class="btn-row csv-loader-row">
+        <input type="file" id="csvFileInput" accept=".csv,text/csv" class="is-hidden" />
+        <button class="btn-secondary" id="loadCsvBtn" type="button" data-i18n="ats.actions.load_csv">Cargar CSV</button>
+        <button class="btn-secondary" id="sampleCsvBtn" type="button" data-i18n="ats.actions.sample_csv">CSV de ejemplo</button>
+      </div>
 
       <div class="form-section">
-        <h2 data-i18n="ats.photo.section">Foto de perfil</h2>
+        <div class="form-section-header">
+          <h2 data-i18n="ats.personal.section">Información personal</h2>
+          <button type="button" class="section-collapse-btn"></button>
+        </div>
+        <div class="form-section-body">
+          <div class="field">
+            <label for="photo" data-i18n="ats.photo.label">Subir foto (opcional)</label>
+            <input type="file" id="photo" accept="image/*" />
+            <div class="hint" data-i18n="ats.photo.hint">Si no subes foto, se mostrarán tus iniciales.</div>
+          </div>
 
-        <div class="field">
-          <label for="photo" data-i18n="ats.photo.label">Subir foto (opcional)</label>
-          <input type="file" id="photo" accept="image/*" />
-          <div class="hint" data-i18n="ats.photo.hint">Si no subes foto, se mostrarán tus iniciales.</div>
+          <div class="field">
+            <label for="fullName" data-i18n="ats.personal.full_name">Nombre completo</label>
+            <input type="text" id="fullName" value="Ruben Rodriguez" />
+          </div>
+
+          <div class="field">
+            <label for="headline" data-i18n="ats.personal.headline">Cargo / titular profesional</label>
+            <input
+              type="text"
+              id="headline"
+              value="Web Developer | Wordpress Shopify | E-commerce"
+            />
+          </div>
+
+          <div class="field">
+            <label for="email" data-i18n="ats.personal.email">Email</label>
+            <input type="text" id="email" value="rubenchoweb@outlook.com" />
+          </div>
+
+          <div class="field">
+            <label for="linkedin" data-i18n="ats.personal.linkedin">LinkedIn</label>
+            <input type="text" id="linkedin" value="linkedin.com/in/rubenrodriguez" />
+          </div>
+
+          <div class="field">
+            <label for="location" data-i18n="ats.personal.location">Ubicación</label>
+            <input type="text" id="location" value="Medellín, Colombia" />
+          </div>
         </div>
       </div>
 
       <div class="form-section">
-        <h2 data-i18n="ats.personal.section">Información personal</h2>
-
-        <div class="field">
-          <label for="fullName" data-i18n="ats.personal.full_name">Nombre completo</label>
-          <input type="text" id="fullName" value="Ruben Rodriguez" />
+        <div class="form-section-header">
+          <h2>Professional summary</h2>
+          <button type="button" class="section-collapse-btn"></button>
         </div>
-
-        <div class="field">
-          <label for="headline" data-i18n="ats.personal.headline">Cargo / titular profesional</label>
-          <input
-            type="text"
-            id="headline"
-            value="Web Developer | Wordpress Shopify | E-commerce"
-          />
-        </div>
-
-        <div class="field">
-          <label for="email" data-i18n="ats.personal.email">Email</label>
-          <input type="text" id="email" value="rubenchoweb@outlook.com" />
-        </div>
-
-        <div class="field">
-          <label for="linkedin" data-i18n="ats.personal.linkedin">LinkedIn</label>
-          <input type="text" id="linkedin" value="linkedin.com/in/rubenrodriguez" />
-        </div>
-
-        <div class="field">
-          <label for="location" data-i18n="ats.personal.location">Ubicación</label>
-          <input type="text" id="location" value="Medellín, Colombia" />
+        <div class="form-section-body">
+          <div class="field">
+            <label for="profile" data-i18n="ats.profile.label">Resumen profesional</label>
+            <textarea id="profile">Desarrollador web con experiencia en WordPress, Shopify y maquetación frontend. Enfocado en la creación, personalización y optimización de sitios web, landing pages, formularios y experiencias digitales orientadas a conversión. Experiencia trabajando con clientes, ajustes UI y soluciones prácticas para entornos de negocio.</textarea>
+          </div>
+          <div class="dynamic-subtitle" data-i18n="ats.experience.section">Experiencia</div>
+          <div id="experienceList"></div>
+          <div class="btn-row">
+            <button class="btn-secondary btn-add" id="addExperienceBtn" type="button" data-i18n="ats.experience.add_btn">+ Agregar experiencia</button>
+          </div>
         </div>
       </div>
 
       <div class="form-section">
-        <h2 data-i18n="ats.profile.section">Perfil profesional</h2>
-
-        <div class="field">
-          <label for="profile" data-i18n="ats.profile.label">Resumen profesional</label>
-          <textarea id="profile">Desarrollador web con experiencia en WordPress, Shopify y maquetación frontend. Enfocado en la creación, personalización y optimización de sitios web, landing pages, formularios y experiencias digitales orientadas a conversión. Experiencia trabajando con clientes, ajustes UI y soluciones prácticas para entornos de negocio.</textarea>
+        <div class="form-section-header">
+          <h2>Education</h2>
+          <button type="button" class="section-collapse-btn"></button>
+        </div>
+        <div class="form-section-body">
+          <div class="checkbox-row">
+            <label class="check-label">
+              <input type="checkbox" id="showEducation" checked>
+              <span>Show Education section in CV</span>
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <label class="check-label">
+              <input type="checkbox" id="showCertifications" checked>
+              <span>Show Certifications section in CV</span>
+            </label>
+          </div>
+          <div class="dynamic-subtitle" data-i18n="ats.skills.section">Habilidades</div>
+          <div class="field">
+            <label for="skills" data-i18n="ats.skills.label">Habilidades</label>
+            <textarea id="skills">WordPress, Shopify, HTML, CSS, JavaScript, UI Frontend, Responsive Design, Formularios, Landing Pages, Integraciones web, Optimización visual, Soporte técnico</textarea>
+          </div>
+          <div class="dynamic-subtitle" data-i18n="ats.education.section">Educación</div>
+          <div id="educationList"></div>
+          <div class="btn-row">
+            <button class="btn-secondary btn-add" id="addEducationBtn" type="button" data-i18n="ats.education.add_btn">+ Agregar educación</button>
+          </div>
+          <div class="dynamic-subtitle" data-i18n="ats.certifications.section">Certificaciones</div>
+          <div class="field">
+            <label for="certifications" data-i18n="ats.certifications.label">Certificaciones</label>
+            <textarea id="certifications">Puedes agregar aquí certificaciones, cursos o programas relevantes relacionados con desarrollo web, WordPress, Shopify, frontend o marketing digital.</textarea>
+          </div>
         </div>
       </div>
 
       <div class="form-section">
-        <h2 data-i18n="ats.experience.section">Experiencia</h2>
-        <div id="experienceList"></div>
-        <div class="btn-row">
-          <button class="btn-secondary btn-add" id="addExperienceBtn" type="button" data-i18n="ats.experience.add_btn">+ Agregar experiencia</button>
+        <div class="form-section-header">
+          <h2 data-i18n="ats.additional.section">Additional (Projects / Languages / Interests)</h2>
+          <button type="button" class="section-collapse-btn"></button>
         </div>
-      </div>
+        <div class="form-section-body">
+          <div class="checkbox-row">
+            <label class="check-label">
+              <input type="checkbox" id="showAdditional" checked>
+              <span>Show Additional section in CV</span>
+            </label>
+          </div>
 
-      <div class="form-section">
-        <h2 data-i18n="ats.education.section">Educación</h2>
-        <div id="educationList"></div>
-        <div class="btn-row">
-          <button class="btn-secondary btn-add" id="addEducationBtn" type="button" data-i18n="ats.education.add_btn">+ Agregar educación</button>
-        </div>
-      </div>
+          <div class="field">
+            <label for="titleAdditional">Additional title</label>
+            <input type="text" id="titleAdditional" value="Additional" />
+          </div>
 
-      <div class="form-section">
-        <h2 data-i18n="ats.skills.section">Habilidades y certificaciones</h2>
+          <div class="additional-editor-grid">
+            <div class="additional-editor-col">
+              <div class="field">
+                <label for="titleProjects">Projects title</label>
+                <input type="text" id="titleProjects" value="Projects" />
+              </div>
+              <div id="projectsList"></div>
+              <div class="btn-row">
+                <button class="btn-secondary btn-add" id="addProjectBtn" type="button" data-i18n="ats.additional.add_project">+ Add project</button>
+              </div>
+            </div>
 
-        <div class="field">
-          <label for="skills" data-i18n="ats.skills.label">Habilidades</label>
-          <textarea id="skills">WordPress, Shopify, HTML, CSS, JavaScript, UI Frontend, Responsive Design, Formularios, Landing Pages, Integraciones web, Optimización visual, Soporte técnico</textarea>
-        </div>
+            <div class="additional-editor-col">
+              <div class="field">
+                <label for="titleLanguages">Languages title</label>
+                <input type="text" id="titleLanguages" value="Languages" />
+              </div>
+              <div id="languagesList"></div>
+              <div class="btn-row">
+                <button class="btn-secondary btn-add" id="addLanguageBtn" type="button" data-i18n="ats.additional.add_language">+ Add language</button>
+              </div>
+            </div>
 
-        <div class="field">
-          <label for="certifications" data-i18n="ats.certifications.label">Certificaciones</label>
-          <textarea id="certifications">Puedes agregar aquí certificaciones, cursos o programas relevantes relacionados con desarrollo web, WordPress, Shopify, frontend o marketing digital.</textarea>
-        </div>
-      </div>
-
-      <div class="form-section">
-        <h2 data-i18n="ats.passions.section">Pasiones / intereses</h2>
-
-        <div class="field">
-          <label for="passions" data-i18n="ats.passions.label">Pasiones</label>
-          <textarea id="passions">Desarrollo web|Interés en construir sitios funcionales, claros y bien estructurados que ayuden a resolver necesidades reales de negocio.
-
-Diseño UI|Motivado por mejorar la interfaz visual, la organización de formularios y la experiencia del usuario.
-
-Tecnología y aprendizaje continuo|Interés constante por mejorar habilidades técnicas y explorar nuevas herramientas para desarrollo y automatización.</textarea>
-          <div class="hint" data-i18n="ats.passions.hint_html">
-            Formato:<br />
-            Título | Descripción<br />
-            Separa cada pasión con una línea en blanco.
+            <div class="additional-editor-col">
+              <div class="field">
+                <label for="titleInterests">Interests title</label>
+                <input type="text" id="titleInterests" value="Interests" />
+              </div>
+              <div id="interestsList"></div>
+              <div class="btn-row">
+                <button class="btn-secondary btn-add" id="addInterestBtn" type="button" data-i18n="ats.additional.add_interest">+ Add interest</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="btn-row">
-        <button class="btn-primary" id="generateBtn" type="button" data-i18n="ats.actions.generate">Generar CV</button>
-        <button class="btn-secondary" id="printBtn" type="button" data-i18n="ats.actions.print">Imprimir / PDF</button>
+        <button class="btn-primary" id="printBtn" type="button" data-i18n="ats.actions.print">Guardar PDF</button>
+        <button class="btn-secondary" id="generateBtn" type="button" data-i18n="ats.actions.generate">Generar CSV</button>
+        <button class="btn-secondary btn-danger-soft" id="clearBtn" type="button" data-i18n="ats.actions.clear_form">Limpiar formulario</button>
       </div>
     </aside>
 
@@ -190,27 +248,40 @@ Tecnología y aprendizaje continuo|Interés constante por mejorar habilidades t�
         </section>
 
         <section class="cv-section">
-          <h2 class="cv-section-title" data-i18n="ats.preview.education">Educación</h2>
-          <div class="section-line"></div>
-          <div id="previewEducation"></div>
-        </section>
-
-        <section class="cv-section">
           <h2 class="cv-section-title" data-i18n="ats.preview.skills">Habilidades</h2>
           <div class="section-line"></div>
           <div class="skills-text" id="previewSkills"></div>
         </section>
 
-        <section class="cv-section">
+        <section class="cv-section" id="previewEducationSection">
+          <h2 class="cv-section-title" data-i18n="ats.preview.education">Educación</h2>
+          <div class="section-line"></div>
+          <div id="previewEducation"></div>
+        </section>
+
+        <section class="cv-section" id="previewCertificationsSection">
           <h2 class="cv-section-title" data-i18n="ats.preview.certifications">Certificaciones</h2>
           <div class="section-line"></div>
           <div class="cert-list" id="previewCertifications"></div>
         </section>
 
-        <section class="cv-section">
-          <h2 class="cv-section-title" data-i18n="ats.preview.passions">Pasiones</h2>
+        <section class="cv-section" id="previewAdditionalSection">
+          <h2 class="cv-section-title" id="previewTitleAdditional">Additional</h2>
           <div class="section-line"></div>
-          <div class="passions-grid" id="previewPassions"></div>
+          <div class="additional-preview-grid">
+            <div class="additional-block">
+            <div class="additional-block-title" id="previewTitleProjects">Projects</div>
+            <div class="cert-list" id="previewProjects"></div>
+            </div>
+            <div class="additional-block">
+            <div class="additional-block-title" id="previewTitleLanguages">Languages</div>
+            <div class="cert-list" id="previewLanguages"></div>
+            </div>
+            <div class="additional-block">
+            <div class="additional-block-title" id="previewTitleInterests">Interests</div>
+            <div class="cert-list" id="previewPassions"></div>
+            </div>
+          </div>
         </section>
       </section>
     </div>

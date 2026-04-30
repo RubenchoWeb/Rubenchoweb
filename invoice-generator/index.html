@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+    <div class="panel">
+      <h1>Invoice Generator</h1>
+
+      <label>Invoice Number <input id="invoiceNumber" value="INV-001"></label>
+      <label>Invoice Date <input id="invoiceDate" type="date"></label>
+      <label>Due Date <input id="dueDate" type="date"></label>
+
+      <label>Your Info
+        <textarea id="yourInfo">Ruben Rodriguez
+Medellín, Colombia
+email@example.com</textarea>
+      </label>
+
+      <label>Client Info
+        <textarea id="clientInfo">Client Name
+Company LLC
+United States</textarea>
+      </label>
+
+      <label>Service Description <input id="description" value="Web Development Services"></label>
+      <label>Quantity / Hours <input id="qty" type="number" value="1"></label>
+      <label>Rate <input id="rate" type="number" value="500"></label>
+      <label>Tax <input id="tax" type="number" value="0"></label>
+
+      <label>Payment Details
+        <textarea id="paymentDetails">Payment Method: Bank Transfer / Wise / PayPal
+Currency: USD</textarea>
+      </label>
+
+      <label>Notes
+        <textarea id="notes">Thank you for your business.
+Please include the invoice number in the payment reference.</textarea>
+      </label>
+
+      <button class="btn-primary" onclick="updateInvoice()">Update Invoice</button>
+      <button class="btn-primary" onclick="window.print()">Export to PDF</button>
+    </div>
+
+    <div>
+      <button class="btn-secondary" onclick="window.print()">Export to PDF</button>
+
+      <div class="invoice">
+        <div class="invoice-header">
+          <div>
+            <div class="invoice-title">INVOICE</div>
+            <p class="muted" id="previewYourInfo"></p>
+          </div>
+
+          <div class="right">
+            <p><strong>Invoice:</strong> <span id="previewInvoiceNumber"></span></p>
+            <p><strong>Date:</strong> <span id="previewInvoiceDate"></span></p>
+            <p><strong>Due Date:</strong> <span id="previewDueDate"></span></p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h3>Bill To</h3>
+            <p class="muted" id="previewClientInfo"></p>
+          </div>
+
+          <div>
+            <h3>Payment Details</h3>
+            <p class="muted" id="previewPaymentDetails"></p>
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th class="right">Qty</th>
+              <th class="right">Rate</th>
+              <th class="right">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="previewDescription"></td>
+              <td class="right" id="previewQty"></td>
+              <td class="right" id="previewRate"></td>
+              <td class="right" id="previewAmount"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="totals">
+          <div class="totals-row">
+            <span>Subtotal</span>
+            <strong id="previewSubtotal"></strong>
+          </div>
+
+          <div class="totals-row">
+            <span>Tax</span>
+            <strong id="previewTax"></strong>
+          </div>
+
+          <div class="totals-row total-final">
+            <span>Total Due</span>
+            <span id="previewTotal"></span>
+          </div>
+        </div>
+
+        <div class="notes">
+          <h3>Notes</h3>
+          <p class="muted" id="previewNotes"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
