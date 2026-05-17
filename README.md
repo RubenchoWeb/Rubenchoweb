@@ -1,281 +1,113 @@
-# 💼 Rubenchoweb — WordPress Tech Lead Portfolio
+# Rubenchoweb - Portfolio & Digital CV
 
-[![HTML5](https://img.shields.io/badge/HTML5-Semantic-E34F26?logo=html5&logoColor=white)](#)
-[![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572B6?logo=css3&logoColor=white)](#)
-[![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=black)](#)
-[![Lucide Icons](https://img.shields.io/badge/Icons-Lucide-5E5CE6)](#)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](#)
-[![SEO](https://img.shields.io/badge/SEO-Optimized-brightgreen)](#)
-[![Lighthouse](https://img.shields.io/badge/Lighthouse-90%2B-success)](#)
+[![Portfolio](https://img.shields.io/badge/Portfolio-rubenchoweb.com-111111)](https://rubenchoweb.com)
+[![Role](https://img.shields.io/badge/Role-WordPress%20Tech%20Lead-2b6cb0)](#)
+[![Stack](https://img.shields.io/badge/Stack-WordPress%20%7C%20PHP%20%7C%20JavaScript-444444)](#)
+[![Status](https://img.shields.io/badge/Status-Open%20to%20opportunities-1f7a4d)](#)
 
-Personal portfolio of **Ruben Rodriguez**,  
-**WordPress Tech Lead / Senior WordPress Developer**, specialized in scalable WordPress architectures, custom plugin development, and performance-driven web solutions.
+Professional portfolio and digital CV of **Ruben Rodriguez**, WordPress Tech Lead and Senior WordPress Developer focused on scalable WordPress platforms, custom plugins, high-performance frontend experiences, and business-oriented web solutions.
 
-🌍 **Live site:**  
-- Primary: https://rubenchoweb.com  
-- GitHub Pages: https://rubenchoweb.github.io/Rubenchoweb/
+Live portfolio: **https://rubenchoweb.com**  
+GitHub Pages: **https://rubenchoweb.github.io/Rubenchoweb/**
 
 ---
 
-## 🇬🇧 English Version
+## Professional Profile
 
-### 👋 About Me
+I specialize in building and leading WordPress-based products where performance, maintainability, SEO, and business impact matter. My work combines technical execution with product thinking: from custom WordPress architectures and API integrations to frontend delivery, migration planning, and technical leadership.
 
-I’m a **Senior WordPress Developer & Tech Lead** with experience building and leading **custom WordPress ecosystems** for high-traffic and business-critical platforms.
+Core areas:
 
-**Core strengths**
-- Custom WordPress themes & plugins (architecture + maintainability)
-- WooCommerce extensions and business logic
-- REST API integrations (3rd-party services, CRM, payments, etc.)
-- Performance optimization (Core Web Vitals, caching, query tuning)
-- Technical leadership (planning, reviews, documentation, stakeholder alignment)
-
-This portfolio reflects **how I design and ship production-grade web solutions**: simple where possible, robust where needed.
+- WordPress architecture, custom themes, plugins, and Gutenberg-oriented development
+- WooCommerce and ecommerce workflows
+- PHP, JavaScript, HTML, CSS, REST APIs, and third-party integrations
+- Performance optimization, Core Web Vitals, SEO foundations, caching, and query tuning
+- Technical leadership, code reviews, planning, documentation, and delivery alignment
 
 ---
 
-### 🧠 Why this portfolio is built this way
+## Portfolio Focus
 
-This project was intentionally built as a **100% static site** using **Vanilla JavaScript**, without frameworks or build tools.
+This repository represents my public professional presence: a static portfolio, bilingual CV, selected work, and supporting frontend projects. It is intentionally lightweight and direct, built with HTML, CSS, and Vanilla JavaScript to keep the experience fast, maintainable, and easy to deploy.
 
-**Goals**
-- ⚡ Maximum performance (minimal JS, clean markup)
-- 🧩 Clear, maintainable code (easy for any dev to read)
-- 🌍 Multi-language support (EN / ES)
-- 🚀 Simple, reliable deployment (GitHub Pages)
+The site highlights:
 
-This mirrors real-world WordPress best practices:
-> **Avoid over-engineering. Build only what adds value.**
-
----
-
-### 🛠️ Tech Stack
-
-**Frontend**
-- **Semantic HTML5**
-- **CSS3**
-  - CSS Variables
-  - Flexbox & Grid
-  - Responsive layout (mobile-first)
-- **Vanilla JavaScript (ES6+)**
-  - UI interactions
-  - Dynamic sections rendering
-  - Language switch + persistence
-  - Typewriter and carousel logic
-
-**Icons**
-- **Lucide Icons (via CDN)**
-  - Lightweight SVG icon system
-  - Uses `data-lucide="icon-name"`
-  - Re-rendered after dynamic DOM updates via `lucide.createIcons()`
-
-**Tooling & Infrastructure**
-- Git & GitHub
-- GitHub Pages
-- WSL + VS Code (Linux-based dev environment)
+- Professional experience as a WordPress Developer and Tech Lead
+- Selected production projects across ecommerce, real estate, corporate sites, and content platforms
+- Technical strengths in WordPress, PHP, JavaScript, Shopify integrations, ACF, SEO, and performance
+- Practice and study projects that show frontend fundamentals and JavaScript problem solving
+- English and Spanish content through a custom lightweight i18n layer
 
 ---
 
-### 🌍 Internationalization (i18n)
+## Selected Work
 
-The site includes a **custom lightweight i18n system** built without external libraries.
+Featured professional projects include:
 
-**How it works**
-- `translations.js` contains all strings and structured content for EN/ES
-- Elements with `data-i18n="path.to.key"` are updated on language change
-- Preferred language is saved in `localStorage`
-- Dynamic sections (Experience, Education, PM Skills) are re-rendered on switch
+- **Holafly** - WordPress blog platform, ecommerce architecture, SEO-focused content systems, and Shopify-related integrations.
+- **Lafam** - Multi-brand ecommerce experience with WordPress and Shopify involvement.
+- **Derco** - Custom WordPress plugin work for quoting, logistics, and dynamic service flows.
+- **Gestion Profesional** - Staffing and corporate website experience with WordPress and Elementor Pro.
+- **GProvivienda** - Real estate platform work using WordPress, ACF, PHP, and custom sections.
+- **El Retiro Centro Comercial** and **Plaza de las Américas** - Shopping center websites with dynamic directories, event content, and user-facing information architecture.
+- **Blau Residence** - Real estate presentation focused on visual quality, UX, and conversion.
 
-This approach keeps things lightweight while reflecting the same concerns as multilingual WordPress setups (WPML/Polylang), but with **zero plugin overhead**.
-
----
-
-### 🎨 Lucide Icons integration
-
-Lucide icons are loaded via CDN for static-host compatibility.
-
-**HTML**
-```html
-<i data-lucide="check-circle"></i>
-```
-
-**JS**
-```js
-lucide.createIcons();
-```
-
-**Note:** whenever the project injects new HTML into the DOM (e.g., PM skills or experience timeline), it calls `lucide.createIcons()` again to render the newly added icons.
+Additional frontend and learning projects are included under `projects/`, including an ATS resume generator, invoice generator, CRUD app, Google clone, Pokedex, and layout-focused builds.
 
 ---
 
-### 📁 Project Structure
+## Technical Snapshot
+
+Primary technologies and practices represented in this portfolio:
+
+- **WordPress:** custom development, plugins, themes, ACF, WooCommerce, architecture, maintenance
+- **Backend:** PHP, MySQL, REST API integrations, data modeling, performance tuning
+- **Frontend:** HTML5, CSS3, JavaScript, responsive UI, accessibility-aware markup
+- **Ecommerce:** WooCommerce, Shopify integrations, checkout and product flow support
+- **Quality:** SEO, Core Web Vitals, maintainable code, documentation, review culture
+- **Deployment:** static hosting through GitHub Pages with custom domain support
+
+---
+
+## Repository Overview
 
 ```text
 /
-├── index.html        # Main HTML structure
-├── style.css         # Global styles & responsive layout
-├── main.js           # UI logic, animations, i18n, interactions
-├── translations.js   # Language definitions (EN / ES)
-└── README.md         # Project documentation
+├── index.html          # Main portfolio and CV page
+├── style.css           # Global visual system and responsive styles
+├── main.js             # Portfolio interactions and dynamic rendering
+├── translations.js     # English and Spanish content
+├── components/         # Shared header/footer components
+├── assets/             # Images and portfolio media
+├── projects/           # Selected tools, demos, and frontend practice projects
+├── CNAME               # Custom domain configuration
+└── README.md           # Professional repository overview
 ```
 
 ---
 
-### 🚀 Deployment & Hosting
+## Contact
 
-**Hosting**
-- GitHub Pages (static hosting)
-- Optional custom domain support (e.g., `rubenchoweb.com`)
-- HTTPS enabled via GitHub Pages
-
-**Deployment flow**
-1. Push to `master`
-2. GitHub Pages serves the static content
-3. Updates go live quickly
-
-No build step, no server maintenance, no CI complexity.
+- Email: **rubenchoweb@outlook.com**
+- LinkedIn: **https://linkedin.com/in/rubenchoweb/**
+- GitHub: **https://github.com/RubenchoWeb**
+- Portfolio: **https://rubenchoweb.com**
 
 ---
 
-### 📊 SEO & Lighthouse (practical checklist)
+## Español
 
-This project targets strong baseline scores by design:
-- Semantic HTML (better crawlability + accessibility)
-- Clear heading hierarchy (H1 → H2 → H3)
-- Meta title + description
-- Responsive layout and lightweight assets
+Este repositorio contiene mi **portafolio profesional y CV digital**. Presenta mi experiencia como **WordPress Developer Senior / Tech Lead**, mis proyectos destacados, mi enfoque técnico y algunos proyectos frontend desarrollados como práctica y demostración de habilidades.
 
-> **Badge note:** The “Lighthouse 90+” badge represents the intended target. Scores may vary depending on network conditions and device.
+Estoy abierto a oportunidades como:
 
----
+- Senior WordPress Developer
+- WordPress Tech Lead
+- Consultor en arquitectura WordPress, performance, SEO técnico e integraciones
+- Desarrollo de soluciones WordPress/WooCommerce a medida
 
-### 🎯 CTA — Hiring & Collaboration
-
-#### I’m open to:
-- **Senior WordPress Developer** roles
-- **WordPress Tech Lead** positions
-- Remote-first teams
-- Complex WordPress / WooCommerce projects
-- Architecture + performance + integrations consulting
-
-If your team needs someone who:
-- Understands WordPress beyond themes
-- Can lead technical decisions and guide delivery
-- Writes clean, scalable code
-- Thinks in performance and business impact
-
-👉 **Let’s talk.**
+Contacto: **rubenchoweb@outlook.com**
 
 ---
 
-### 📬 Contact
-
-- ✉️ Email: **rubenchoweb@outlook.com**
-- 💼 LinkedIn: *https://linkedin.com/in/rubenchoweb/*
-- 🧑‍💻 GitHub: https://github.com/RubenchoWeb
-
----
-
-## 🇪🇸 Versión en Español
-
-### 👋 Sobre mí
-
-Soy **WordPress Developer Senior / Tech Lead**, con experiencia construyendo y liderando **ecosistemas WordPress a medida** para plataformas de alto tráfico y proyectos críticos para el negocio.
-
-**Fortalezas**
-- Temas y plugins personalizados (arquitectura + mantenibilidad)
-- Extensiones WooCommerce y lógica de negocio
-- Integraciones REST API (CRM, pasarelas, servicios externos)
-- Optimización de rendimiento (Core Web Vitals, cachés, SQL)
-- Liderazgo técnico (planificación, revisiones, documentación, alineación)
-
-Este portafolio refleja mi forma real de trabajar: **simple, escalable y orientada a resultados**.
-
----
-
-### 🧠 Por qué está hecho así
-
-Este proyecto se construyó como un **sitio 100% estático** con **JavaScript Vanilla**, sin frameworks ni build tools.
-
-**Objetivos**
-- ⚡ Máximo rendimiento
-- 🧩 Código claro y mantenible
-- 🌍 Soporte multi-idioma (EN / ES)
-- 🚀 Despliegue simple y confiable (GitHub Pages)
-
-Enfoque alineado con buenas prácticas reales en WordPress:
-> **Evitar complejidad innecesaria. Construir lo que aporta valor.**
-
----
-
-### 🛠️ Tecnologías
-
-**Frontend**
-- **HTML5 semántico**
-- **CSS3**
-  - Variables CSS
-  - Flexbox & Grid
-  - Diseño responsive (mobile-first)
-- **JavaScript Vanilla (ES6+)**
-  - Interacciones UI
-  - Render dinámico de secciones
-  - Traducciones + persistencia
-  - Typewriter y carrusel
-
-**Iconos**
-- **Lucide Icons (CDN)**
-  - SVGs livianos
-  - Uso con `data-lucide="icon-name"`
-  - Re-render dinámico con `lucide.createIcons()`
-
-**Infraestructura**
-- Git & GitHub
-- GitHub Pages
-- WSL + VS Code
-
----
-
-### 🌍 Internacionalización (i18n)
-
-Sistema liviano sin librerías externas:
-- `translations.js` contiene textos y datos estructurados EN/ES
-- Se actualiza el contenido usando `data-i18n="ruta.a.llave"`
-- El idioma se guarda en `localStorage`
-- Secciones dinámicas se re-renderizan al cambiar el idioma
-
----
-
-### 🎨 Iconos con Lucide
-
-**HTML**
-```html
-<i data-lucide="check-circle"></i>
-```
-
-**JS**
-```js
-lucide.createIcons();
-```
-
----
-
-### 🎯 CTA — Oportunidades (WordPress Senior / Tech Lead)
-
-Estoy abierto a:
-- **Roles Senior WordPress**
-- **Posiciones Tech Lead**
-- Equipos remotos
-- Proyectos WordPress / WooCommerce complejos
-- Consultoría de arquitectura, performance e integraciones
-
-Si buscas a alguien que:
-- Domine WordPress más allá de “instalar plugins”
-- Diseñe arquitecturas escalables
-- Tome decisiones técnicas con criterio
-- Aporte liderazgo real
-
-👉 **Conversemos.**
-
----
-
-© 2025 — Built with ❤️ using HTML, CSS & Vanilla JavaScript
+© 2026 Ruben Rodriguez. Portfolio built with HTML, CSS and Vanilla JavaScript.
