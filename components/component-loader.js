@@ -3,15 +3,47 @@
     return document.body?.dataset.basePath || "./";
   }
 
+  function isPrimaryNavKey(key) {
+    return ["home", "skills", "experience", "education", "projects", "tools", "contact"].includes(key);
+  }
+
   function setActiveNav() {
     const activeKey = document.body?.dataset.activeNav;
     if (!activeKey) return;
 
     document.querySelectorAll("[data-nav-key]").forEach((item) => {
-      const isToolPage = ["cv_generator", "invoice_generator"].includes(activeKey);
+      const isToolPage = !isPrimaryNavKey(activeKey);
       const isActive = item.dataset.navKey === activeKey || (item.dataset.navKey === "tools" && isToolPage);
       item.classList.toggle("active", isActive);
     });
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  async function populateProjectsMenu() {
+    const menu = document.getElementById("projects-menu");
+    if (!menu) return;
+
+    const response = await fetch(`${getBasePath()}projects/projects.json`);
+    if (!response.ok) throw new Error("Could not load projects menu.");
+
+    const projects = await response.json();
+    const items = Array.isArray(projects) ? projects : [];
+
+    menu.innerHTML = items
+      .filter((project) => project && project.slug && project.path && project.title)
+      .map((project) => {
+        const href = `${getBasePath()}${project.path}`;
+        return `<li><a href="${escapeHtml(href)}" class="nav-link" data-nav-key="${escapeHtml(project.slug)}">${escapeHtml(project.title)}</a></li>`;
+      })
+      .join("");
   }
 
   function initNavMenu() {
@@ -90,6 +122,7 @@
 
       try {
         await Promise.all(hosts.map(loadComponent));
+        await populateProjectsMenu();
         setActiveNav();
         initNavMenu();
         initComponentLanguage();

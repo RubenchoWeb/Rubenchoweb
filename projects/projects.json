@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "ats-resume-generator",
+    "title": "ATS Resume Generator",
+    "path": "projects/ats-resume-generator/"
+  },
+  {
+    "slug": "invoice-generator",
+    "title": "Invoice Generator",
+    "path": "projects/invoice-generator/"
+  }
+]

@@ -47,7 +47,7 @@ window.translations = {
           degree: "Full Stack Web Development Certification",
           institution: "Platzi",
           year: "2019 - present",
-          url: "https://platzi.com/p/rubenchoweb/",
+          url: "https://platzi.com/p/RubenchoWeb/",
           skills: ["WordPress", "CSS", "Scrum", "WooCommerce", "PHP", "JavaScript", "HTML", "Git & Github", "Bootstrap", "SEO"]
         }
       ]
@@ -181,7 +181,16 @@ window.translations = {
       p8_title: "Plaza de las Américas - Commercial Portal",
       p8_desc: "Full-featured shopping mall platform with store locator, event calendar, parking management, and merchant dashboard.",
       p9_title: "Develon - Heavy Machinery Sales Landing",
-      p9_desc: "High-conversion landing page for heavy machinery sales company (excavators, backhoes). Optimized for lead generation with equipment specifications and inquiry forms."
+      p9_desc: "High-conversion landing page for heavy machinery sales company (excavators, backhoes). Optimized for lead generation with equipment specifications and inquiry forms.",
+      p10_title: "Blau Residence",
+      p10_desc: "Luxury real estate website focused on showcasing premium residences through a modern visual experience, interactive layouts, and optimized performance for desktop and mobile devices."
+    },
+    tools: {
+      title: "Learning Lab",
+      subtitle: "Practice builds and study projects used to sharpen frontend, JavaScript, and layout skills.",
+      group_kicker: "Practice & Study",
+      group_title: "Experimental and learning projects",
+      group_desc: "A curated set of smaller builds created to explore interfaces, DOM logic, responsive layouts, and hands-on implementation patterns."
     },
     contact: {
       title: "Looking to improve your website?",
@@ -391,7 +400,16 @@ window.translations = {
       p8_title: "Plaza de las Américas - Portal Comercial",
       p8_desc: "Plataforma completa de centro comercial con localizador de tiendas, calendario de eventos, gestión de parqueadero y panel de comerciantes.",
       p9_title: "Develon - Landing Page Maquinaria Pesada",
-      p9_desc: "Landing page de alta conversión para venta de maquinaria pesada (excavadoras, retroexcavadoras). Optimizado para generación de leads con especificaciones de equipos y formularios de consulta."
+      p9_desc: "Landing page de alta conversión para venta de maquinaria pesada (excavadoras, retroexcavadoras). Optimizado para generación de leads con especificaciones de equipos y formularios de consulta.",
+      p10_title: "Blau Residence",
+      p10_desc: "Sitio web inmobiliario de lujo enfocado en mostrar residencias premium mediante una experiencia visual moderna, layouts interactivos y rendimiento optimizado para desktop y mobile."
+    },
+    tools: {
+      title: "Learning Lab",
+      subtitle: "Proyectos de práctica y estudio para fortalecer habilidades de frontend, JavaScript y maquetación responsive.",
+      group_kicker: "Práctica y estudio",
+      group_title: "Proyectos experimentales y de aprendizaje",
+      group_desc: "Una selección de builds pequeños creados para explorar interfaces, lógica del DOM, layouts responsive y patrones de implementación práctica."
     },
     contact: {
       title: "¿Necesitas ayuda con tu proyecto web?",

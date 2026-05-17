@@ -810,6 +810,84 @@ pre {
   font-weight: 500;
 }
 
+/* --- TOOLS SECTION --- */
+.tools-showcase {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tool-group-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.tool-group-header {
+  margin-bottom: 28px;
+}
+
+.tool-group-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: var(--primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tool-group-header h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.tool-group-header p {
+  color: var(--text-muted);
+  max-width: 760px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tool-link-card {
+  display: block;
+  padding: 20px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  transition: var(--transition);
+}
+
+.tool-link-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.55);
+  background-color: rgba(56, 189, 248, 0.08);
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.14);
+}
+
+.tool-link-name {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.tool-link-path {
+  display: block;
+  color: var(--text-muted);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.82rem;
+  word-break: break-word;
+}
+
 /* Carousel Controls */
 .carousel-btn {
   background-color: var(--bg-card);
@@ -932,6 +1010,10 @@ pre {
   .skills-split-layout {
     grid-template-columns: 1fr;
   }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -1018,6 +1100,14 @@ pre {
   /* Mobile: 1 card */
   .project-card {
     flex: 0 0 100%;
+  }
+
+  .tool-group-card {
+    padding: 24px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
   }
   
   .carousel-wrapper {
